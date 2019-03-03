@@ -3,19 +3,6 @@
 # Copyright © 2016-2019 Mozg. All rights reserved.
 # See LICENSE.txt for license details.
 
-# Check if we're root, if not show a warning
-if [[ $UID -ne 0 ]]; then
-  case $1 in
-    ""|help) # You should be allowed to check the help without being root
-      ;;
-    *)
-      #echo "Sorry, but this needs to be run as root."
-      echo "Ok"
-      #exit 1
-      ;;
-  esac
-fi
-
 setVars () {
 echo -e "${ONYELLOW} setVars ${NORMAL}"
 
@@ -263,34 +250,22 @@ echo -e "${ONYELLOW} profile () { ${NORMAL}"
 echo -e "${ONYELLOW} check mysql ${NORMAL}"
 
 if type mysql >/dev/null 2>&1; then
-    echo "mysql installed"
+  echo "mysql installed"
 
-    #magento_sample_data_copy
-    #magento_sample_data_install
-
-    mysql_show_tables
-
-    if [ -z "${MYSQL_SHOW_TABLES}" ]; then # -z String, True if string is empty.
-      echo -e "${RED} MYSQL_SHOW_TABLES = null ${NORMAL}"
-      if [ -f ".env" ] ; then # if file not exits
-          echo -e "${RED} .env ${NORMAL}"
-          magento_sample_data_import_haifeng
-      fi
+  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+    echo -e "${RED} local.xml = null ${NORMAL}"
+    if [ -f ".env" ] ; then # if file exits
+      echo -e "${RED} .env ${NORMAL}"
+      magento_sample_data_import_haifeng
     fi
+    magento_install
+  fi
 
-    mysql_select_admin_user
+  mysql_select_admin_user
 
-    if [ -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
-        echo -e "${RED} MYSQL_SELECT_ADMIN_USER = null ${NORMAL}"
-        magento_install        
-    fi
-
-    if [ ! -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
-      if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-          echo -e "${RED} local.xml = null ${NORMAL}"
-          magento_config_xml
-      fi
-    fi
+  if [ ! -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
+    magento_config_xml
+  fi
 
 else
     echo "mysql not installed"
