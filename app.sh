@@ -108,40 +108,10 @@ function_after
 
 }
 
-postdeploy () { # postdeploy command. Use this to run any one-time setup tasks that make the app, and any databases, ready and useful for testing.
-
-function_before
-echo -e "${ONYELLOW} postdeploy () { ${NORMAL}"
-
-post_update_cmd # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
-
-function_after
-
-}
-
-mysql_show_tables () {
-
-function_before
-echo -e "${ONYELLOW} mysql_show_tables () { ${NORMAL}"
-
-#show_db_vars
-
-MYSQL_SHOW_TABLES=`mysql -h "${MAGE_DB_HOST}" -P "${MAGE_DB_PORT}" -u "${MAGE_DB_USER}" -p"${MAGE_DB_PASS}" "${MAGE_DB_NAME}" -N -e "SHOW TABLES"`
-
-echo -e "${ONPURPLE} - ${NORMAL}"
-
-#echo $MYSQL_SHOW_TABLES
-
-function_after
-
-}
-
 mysql_select_admin_user () {
 
 function_before
 echo -e "${ONYELLOW} mysql_select_admin_user () { ${NORMAL}"
-
-#show_db_vars
 
 MYSQL_SELECT_ADMIN_USER=`mysql -h "${MAGE_DB_HOST}" -P "${MAGE_DB_PORT}" -u "${MAGE_DB_USER}" -p"${MAGE_DB_PASS}" "${MAGE_DB_NAME}" -N -e "SELECT * FROM admin_user"`
 
@@ -153,243 +123,10 @@ function_after
 
 }
 
-download_install () {
-
-function_before
-echo -e "${ONYELLOW} download_install () { ${NORMAL}"
-
-mysql_show_tables
-
-echo -e "${ONYELLOW} cat > composer.json <<- _EOF_ ${NORMAL}"
-
-cat > composer.json <<- _EOF_
-{
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "license": [
-        "proprietary"
-    ],
-    "repositories":[
-        {
-            "type":"composer",
-            "url":"https://packages.firegento.com"
-        }
-    ],
-    "extra":{
-        "magento-root-dir": "magento",
-        "magento-deploystrategy": "copy",
-        "magento-force": true
-    },
-    "require": {
-        "magento-hackathon/magento-composer-installer": "~3.0",
-        "aydin-hassan/magento-core-composer-installer": "~1.2",
-        "firegento/magento": "~1.9.4.0",
-        "aoepeople/aoe_scheduler": "^1.5",
-        "aschroder/smtp_pro": "^2.0",
-        "mozgbrasil/magento-bundle-php_56": "dev-master"
-    }
-}
-_EOF_
-
-echo -e "${ONYELLOW} composer diagnose ${NORMAL}"
-
-composer diagnose
-
-echo -e "${ONYELLOW} composer update ${NORMAL}"
-
-composer update
-
-echo -e "${ONYELLOW} magento_sample_data_install ${NORMAL}"
-
-magento_sample_data_install
-
-function_after
-
-}
-
-magento_sample_data () {
-
-function_before
-echo -e "${ONYELLOW} magento_sample_data () { ${NORMAL}"
-
-magento_sample_data_copy
-magento_sample_data_import
-
-function_after
-
-}
-
-magento_sample_data_install () {
-
-function_before
-echo -e "${ONYELLOW} magento_sample_data_install () { ${NORMAL}"
-
-magento_sample_data
-magento_install
-
-function_after
-
-}
-
-release () {
-
-function_before
-echo -e "${ONYELLOW} release () { ${NORMAL}"
-
-
-function_after
-
-}
-
-
-profile () { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
-
-function_before
-echo -e "${ONYELLOW} profile () { ${NORMAL}"
-
-echo -e "${ONYELLOW} check mysql ${NORMAL}"
-
-if type mysql >/dev/null 2>&1; then
-  echo "mysql installed"
-
-  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-    echo -e "${RED} local.xml = null ${NORMAL}"
-    if [ -f ".env" ] ; then # if file exits
-      echo -e "${RED} .env ${NORMAL}"
-      magento_sample_data_import_haifeng
-    fi
-    magento_install
-  fi
-
-  mysql_select_admin_user
-
-  if [ ! -z "${MYSQL_SELECT_ADMIN_USER}" ]; then
-    magento_config_xml
-  fi
-
-else
-    echo "mysql not installed"
-fi
-
-function_after
-
-}
-
-post_update_cmd () { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
-# Na heroku o Mysql ainda não foi instalado nesse ponto
-
-function_before
-echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-pwd
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-du -hsx ./* | sort -rh | head -10
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-du -hsx magento/vendor/* | sort -rh | head -10
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-if [ -d magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media ]; then
-    echo -e "${ONYELLOW} haifeng-ben-zhang/magento1.9.2.4-sample-data ${NORMAL}"
-    cp -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* magento/media/
-    cp -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* magento/skin/
-fi
-
-if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
-    echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${NORMAL}"
-    cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
-fi
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
-rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
-
-# FIX: Heroku, Compiled slug size: xM is too large (max is 500M).
-
-du -hsx ./magento/media/* | sort -rh | head -10
-rm -fr ./magento/media/downloadable
-du -hsx ./magento/media/catalog/product/* | sort -rh | head -10
-rm -fr ./magento/media/catalog/product/p
-rm -fr ./magento/media/catalog/product/cache
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-du -hsx ./* | sort -rh | head -10
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-du -hsx magento/vendor/* | sort -rh | head -10
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-show_vars
-
-profile
-
-##
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
-function_after
-
-}
-
-post_install_cmd () { # post-install-cmd: occurs after the install command has been executed with a lock file present.
-
-function_before
-echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
-
-post_update_cmd
-
-function_after
-
-}
-
-
-dot_env () {
-
-function_before
-echo -e "${ONYELLOW} dot_env () { ${NORMAL}"
-
-echo -e "${ONYELLOW} env MAGE_ ${NORMAL}"
-
-env | grep ^MAGE_
-
-echo -e "${ONYELLOW} .env ${NORMAL}"
-
-if [ ! -f .env ];then
-
-  echo -e "${ONYELLOW} .env failed ${NORMAL}"
-
-else
-
-  echo -e "${ONYELLOW} .env ok ${NORMAL}"
-
-  export $(cat .env | xargs)
-
-fi
-
-echo -e "${ONYELLOW} env MAGE_ ${NORMAL}"
-
-env | grep ^MAGE_
-
-function_after
-
-}
-
 magento_config_xml () {
 
 function_before
 echo -e "${ONYELLOW} magento_config_xml () { ${NORMAL}"
-
-dot_env
 
 echo -e "${ONYELLOW} Check local.xml ${NORMAL}"
 
@@ -416,170 +153,10 @@ function_after
 
 }
 
-show_db_vars () {
-
-function_before
-echo -e "${ONYELLOW} show_db_vars () { ${NORMAL}"
-
-# -n String, True if the length of String is nonzero.
-# -z String, True if string is empty.
-
-echo -e "${ONBLUE} DB_HOST: ${DB_HOST} ${NORMAL}"
-
-if [ -z $DB_HOST ]; then # Arguments localhost
-
-    echo -e "${RED} DB_HOST Failed ${NORMAL}"
-
-else
-
-    echo -e "${ONGREEN} DB_HOST ${NORMAL}"
-
-    echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
-
-    echo -e "${ONPURPLE} - ${NORMAL}"
-
-    echo -e "${BLUE} `pwd` ${NORMAL}"
-
-    ls -lah
-
-    echo -e "${ONPURPLE} - ${NORMAL}"
-
-    #
-
-    #read -e -p "Confirme que os dados acima está correto [S/N]: " -i "S" accept
-
-    #if [ "$accept" != "S" ];then
-    #    echo -e "${RED} Processo abortado ${NORMAL}"
-    #    exit
-    #fi
-
-    #
-
-fi
-
-#
-
-if [ -z $JAWSDB_URL ]; then
-
-  echo -e "${RED} JAWSDB Failed ${NORMAL}"
-
-else 
-
-  echo -e "${ONGREEN} JAWSDB ${NORMAL}"
-
-  # https://regex101.com/r/EeO9HR/2
-
-  REGEX_EXPR='postgres:\/\/(.+):(.+)@(.+):(5432| )\/(.+)'
-  #$DATABASE_URL # PostgreSQL
-
-  REGEX_EXPR='mysql:\/\/(.+):(.+)@(.+):(3306| )\/(.+)'
-  #$JAWSDB_URL # MySQL
-
-  if [[ $JAWSDB_URL =~ $REGEX_EXPR ]]
-  then
-
-      echo -e "${GREEN} Get Regex ${NORMAL}"
-
-      #echo The regex matches!
-      #echo $BASH_REMATCH
-      #echo ${BASH_REMATCH[1]}
-      #echo ${BASH_REMATCH[2]}
-      #echo ${BASH_REMATCH[3]}
-      #echo ${BASH_REMATCH[4]}
-      #echo ${BASH_REMATCH[5]}
-
-      export MAGE_URL=""
-      export MAGE_DB_HOST=${BASH_REMATCH[3]}
-      export MAGE_DB_HOST=${BASH_REMATCH[4]}
-      export MAGE_DB_NAME=${BASH_REMATCH[5]}
-      export MAGE_DB_USER=${BASH_REMATCH[1]}
-      export MAGE_DB_PASS=${BASH_REMATCH[2]}
-
-      echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
-      echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
-      echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
-      echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
-      echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
-      echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
-
-  else
-      echo -e "${RED} Regex Failed ${NORMAL}"
-  fi
-
-fi
-
-#
-
-if [ -z $MAGE_DB_HOST ]; then
-
-    echo -e "${RED} ENV Failed ${NORMAL}"
-
-else 
-
-    echo -e "${ONGREEN} Get ENV ${NORMAL}"
-
-    echo -e "${GREEN} MAGE_URL: ${MAGE_URL} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_HOST: ${MAGE_DB_HOST} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_PORT: ${MAGE_DB_PORT} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_NAME: ${MAGE_DB_NAME} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_USER: ${MAGE_DB_USER} ${NORMAL}"
-    echo -e "${GREEN} MAGE_DB_PASS: ${MAGE_DB_PASS} ${NORMAL}"
-
-fi
-
-#
-
-function_after
-
-}
-
-magento_sample_data_copy () {
-
-function_before
-echo -e "${ONYELLOW} magento_sample_data_copy () { ${NORMAL}"
-
-mysql_show_tables
-
-FILE_CACHE=$FOLDER_CACHE'/magento-sample-data-1.9.2.4-fix.tar.gz'
-
-echo -e "${ONYELLOW} ${FILE_CACHE} ${NORMAL}"
-
-if [ -f "$FILE_CACHE" ];then
-    echo -e "${ONGREEN} Arquivo se encontra em cache ${NORMAL}"
-    cp $FILE_CACHE .
-else
-    echo -e "${ONYELLOW} Arquivo não se encontra em cache ${NORMAL}"
-    wget https://ufpr.dl.sourceforge.net/project/mageloads/assets/1.9.2.4/magento-sample-data-1.9.2.4-fix.tar.gz
-    if [ -d "$FOLDER_CACHE" ]; then
-      cp magento-sample-data-1.9.2.4-fix.tar.gz $FOLDER_CACHE
-    fi
-fi
-
-echo -e "${ONYELLOW} Descompactando arquivo ${NORMAL}"
-
-tar xvzf magento-sample-data-1.9.2.4-fix.tar.gz
-
-echo -e "${ONYELLOW} Copiando arquivos ${NORMAL}"
-
-cp -fr magento-sample-data-1.9.2.4/media/* magento/media/
-
-cp -fr magento-sample-data-1.9.2.4/skin/* magento/skin/
-
-function_after
-
-}
-
 magento_sample_data_import_haifeng () {
 
 function_before
 echo -e "${ONYELLOW} magento_sample_data_import_haifeng () { ${NORMAL}"
-
-#show_db_vars
 
 #grep -ri 'LOCK TABLE' magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
 
@@ -604,25 +181,6 @@ function_after
 
 }
 
-magento_sample_data_import () {
-
-function_before
-echo -e "${ONYELLOW} magento_sample_data_import () { ${NORMAL}"
-
-echo -e "${ONYELLOW} Importando Banco de Dados ${NORMAL}"
-
-#show_db_vars
-
-mysql -h ${MAGE_DB_HOST} -P ${MAGE_DB_PORT} -u ${MAGE_DB_USER} -p${MAGE_DB_PASS} ${MAGE_DB_NAME} < 'magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql'
-
-echo -e "${ONYELLOW} Removendo arquivos ${NORMAL}"
-
-rm -fr magento-sample-data-1.9.2.4-fix.tar.gz magento-sample-data-1.9.2.4
-
-function_after
-
-}
-
 magento_install () {
 
 function_before
@@ -640,8 +198,6 @@ pwd && ls -lah
 #echo -e "${ONYELLOW} Aplicando permissões ${NORMAL}"
 
 #chmod 777 -R .
-
-#show_db_vars
 
 echo -e "${ONYELLOW} install.php ${NORMAL}"
 
@@ -724,52 +280,135 @@ function_after
 
 }
 
-#
+release () {
 
-if [ "$#" -eq  "0" ]
-   then
-     echo "No arguments supplied"
- else
-     echo "Arguments supplied"
+function_before
+echo -e "${ONYELLOW} release () { ${NORMAL}"
 
-    for ARGUMENT in "$@" # Parse the command line arguments
-    do
 
-    KEY=$(echo $ARGUMENT | cut -f1 -d=)
-    VALUE=$(echo $ARGUMENT | cut -f2 -d=)
+function_after
 
-    #echo "${BOLD} Arguments... ${NORMAL}"
-    #echo $KEY
-    #echo $VALUE
+}
 
-    case "$KEY" in
-    --db_host)
-      DB_HOST=${VALUE}
-    ;;
-    --db_port)
-      DB_PORT=${VALUE}
-    ;;
-    --db_name)
-      DB_NAME=${VALUE}
-    ;;
-    --db_user)
-      DB_USER=${VALUE}
-    ;;
-    --db_pass)
-      DB_PASS=${VALUE}
-    ;;
-    --url)
-      URL=${VALUE}
-    ;;
-    *)
-      NADA='NULO'
-    ;;
-    esac
+post_update_cmd () { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
+# Na heroku o Mysql ainda não foi instalado nesse ponto
 
-    done
+function_before
+echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
 
-fi  
+echo -e "${ONYELLOW} - ${NORMAL}"
 
+pwd
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+du -hsx ./* | sort -rh | head -10
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+du -hsx magento/vendor/* | sort -rh | head -10
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+if [ -d magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media ]; then
+    echo -e "${ONYELLOW} haifeng-ben-zhang/magento1.9.2.4-sample-data ${NORMAL}"
+    cp -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* magento/media/
+    cp -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* magento/skin/
+fi
+
+if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
+    echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${NORMAL}"
+    cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
+fi
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
+rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
+
+# FIX: Heroku, Compiled slug size: xM is too large (max is 500M).
+
+du -hsx ./magento/media/* | sort -rh | head -10
+rm -fr ./magento/media/downloadable
+du -hsx ./magento/media/catalog/product/* | sort -rh | head -10
+rm -fr ./magento/media/catalog/product/p
+rm -fr ./magento/media/catalog/product/cache
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+du -hsx ./* | sort -rh | head -10
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+du -hsx magento/vendor/* | sort -rh | head -10
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+show_vars
+
+profile
+
+##
+
+echo -e "${ONYELLOW} - ${NORMAL}"
+
+function_after
+
+}
+
+post_install_cmd () { # post-install-cmd: occurs after the install command has been executed with a lock file present.
+
+function_before
+echo -e "${ONYELLOW} post_install_cmd () { ${NORMAL}"
+
+post_update_cmd
+
+function_after
+
+}
+
+postdeploy () { # postdeploy command. Use this to run any one-time setup tasks that make the app, and any databases, ready and useful for testing.
+
+function_before
+echo -e "${ONYELLOW} postdeploy () { ${NORMAL}"
+
+post_update_cmd # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
+
+function_after
+
+}
+
+profile () { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
+
+function_before
+echo -e "${ONYELLOW} profile () { ${NORMAL}"
+
+echo -e "${ONYELLOW} check mysql: 00:52:00 ${NORMAL}"
+
+if type mysql >/dev/null 2>&1; then
+
+  echo "mysql installed"
+
+  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+    echo -e "${RED} local.xml = null ${NORMAL}"
+    if [ -f ".env" ] ; then # if file exits
+      echo -e "${RED} .env ${NORMAL}"
+      magento_sample_data_import_haifeng
+      magento_install
+    fi    
+  fi
+
+  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+    magento_config_xml
+  fi
+
+else
+    echo "mysql not installed"
+fi
+
+function_after
+
+}
 
 #
 
