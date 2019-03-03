@@ -259,7 +259,7 @@
         }
     ],
     "require": {
-        "php": "^7.2.*",
+        "php": ">=5.5.0 <7.3.0",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
