@@ -1,0 +1,314 @@
+{
+    "name": "mozgbrasil/deploy-magento",
+    "description": "Magento Project",
+    "version": "1.0.0",
+    "type": "project",
+    "keywords": [
+      "deploy",
+      "magento",
+      "mozg"
+    ],
+    "homepage": "http://mozg.com.br",
+    "time": "2019-02-25 19:59:31",
+    "license": [
+        "proprietary"
+    ],
+    "authors": [
+        {
+            "name": "Marcio dos Santos Amorim",
+            "email": "suporte@mozg.com.br",
+            "homepage": "http://mozg.com.br",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "suporte@mozg.com.br",
+        "issues": "https://github.com/mozgbrasil/deploy-magento/issues",
+        "forum": "http://mozg.com.br/forums/view/1",
+        "wiki": "http://wiki.mozg.com.br",
+        "irc": "irc://irc.freenode.org/mozgbrasil",
+        "source": "https://github.com/mozgbrasil/deploy-magento",
+        "docs": "https://github.com/mozgbrasil/deploy-magento/wiki",
+        "rss": "http://mozg.com.br/sitemap.xml"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://packages.firegento.com"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "prasathmani/tinyfilemanager",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/prasathmani/tinyfilemanager.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ceckoslab/ceckoslab_quicklogin",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/ceckoslab/CeckosLab_QuickLogin.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module-3rd/magento-iwd-opc",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module-3rd/magento-iwd-all",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/php-framework",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-bancodobrasil",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-base",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-boxpacker",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-bradesco",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-brasil-regions",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-braspag",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-checkout-filters",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-cielo",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-clearsale",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-correios",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-customer",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-fee",
+            "options": {
+              "symlink": true
+            }
+        },
+
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-itau",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-jamef",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-jadlog",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-locale-pt_br",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-loggi",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-pagseguro",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-payment",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-product-page-shipping",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-rede",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-redecard",
+            "options": {
+              "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/home/marcio/dados/fullstack/magento-module/magento-squidfacil",
+            "options": {
+              "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "php": "^7.2.*",
+        "magento-hackathon/magento-composer-installer": "~3.0",
+        "aydin-hassan/magento-core-composer-installer": "~1.2",
+        "firegento/magento": "~1.9.4.0",
+        "haifeng-ben-zhang/magento1.9.2.4-sample-data": "1.0.*",
+        "prasathmani/tinyfilemanager": "1.0.*",
+        "ceckoslab/ceckoslab_quicklogin": "1.0.*",
+        "aoepeople/aoe_scheduler": "^1.5",
+        "aschroder/smtp_pro": "^2.0",
+        "symfony/process": "^3.4"
+    },
+    "require-dev": {
+        "mozgbrasil/magento-iwd-opc": "dev-master",
+        "mozgbrasil/magento-brasil-regions": "dev-master",
+        "mozgbrasil/magento-locale-pt_br": "dev-master",
+        "mozgbrasil/magento-correios-compile_sufix": "@dev",
+        "mozgbrasil/magento-jamef-compile_sufix": "@dev",
+        "mozgbrasil/magento-jadlog-compile_sufix": "@dev",
+        "mozgbrasil/magento-loggi-compile_sufix": "@dev",
+        "mozgbrasil/magento-clearsale-compile_sufix": "@dev",
+        "mozgbrasil/magento-customer-compile_sufix": "@dev",
+        "mozgbrasil/magento-braspag-compile_sufix": "@dev",
+        "mozgbrasil/magento-cielo-compile_sufix": "@dev",
+        "mozgbrasil/magento-itau-compile_sufix": "@dev",
+        "mozgbrasil/magento-checkout-filters-compile_sufix": "@dev",
+        "mozgbrasil/magento-redecard-compile_sufix": "@dev",
+        "mozgbrasil/magento-bradesco-compile_sufix": "@dev",
+        "mozgbrasil/magento-bancodobrasil-compile_sufix": "@dev",
+        "mozgbrasil/magento-pagseguro-compile_sufix": "@dev",
+        "mozgbrasil/magento-rede-compile_sufix": "@dev",
+        "mozgbrasil/magento-squidfacil-compile_sufix": "@dev"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "process-timeout": 0,
+        "vendor-dir": "magento/vendor"
+    },
+    "extra":{
+        "magento-root-dir":"magento/",
+        "magento-deploystrategy": "symlink",
+        "magento-force": true
+    },
+    "scripts": {
+        "post-update-cmd": [
+          "echo '#@@# post-update-cmd';",
+          "php -r \"system('bash app.sh post_update_cmd');\""
+        ],
+        "post-install-cmd": [
+          "echo '#@@# post-install-cmd';",
+          "php -r \"system('bash app.sh post_install_cmd');\""
+        ]
+    }
+}

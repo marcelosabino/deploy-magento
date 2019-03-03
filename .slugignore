@@ -1,0 +1,9 @@
+node_modules
+*.dev.md
+magento
+vendor
+addon-manifest.json
+app_log.txt
+.env
+config.txt
+n98-magerun.phar

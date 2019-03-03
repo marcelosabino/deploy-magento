@@ -1,0 +1,75 @@
+{
+    "name":"mozgbrasil/heroku-magento",
+    "description":"Heroku Magento App",
+    "keywords":[
+        "heroku",
+        "magento",
+        "mozg",
+        "brasil"
+    ],
+    "website":"http://mozg.com.br/",
+    "repository":"https://github.com/mozgbrasil/heroku-magento",
+    "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
+    "success_url":"/",
+    "scripts":{
+        "postdeploy":"bash app.sh postdeploy",
+        "pr-predestroy":"bash app.sh predestroy"
+    },
+    "env":{
+        "MAGE_URL":{
+          "description": "",
+          "value": "http://APP_NAME.herokuapp.com/magento/"
+        },
+        "MAGE_DB_HOST":{
+          "description": "",
+          "value": ""
+        },
+        "MAGE_DB_PORT":{
+          "description": "",
+          "value": "3306"
+        },
+        "MAGE_DB_NAME":{
+          "description": "",
+          "value": ""
+        },
+        "MAGE_DB_USER":{
+          "description": "",
+          "value": ""
+        },
+        "MAGE_DB_PASS":{
+          "description": "",
+          "value": ""
+        },
+        "SECRET_TOKEN":{
+            "description":"A secret key for verifying the integrity of signed cookies.",
+            "generator":"secret"
+        }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "addons":[
+    ],
+    "buildpacks":[
+        {
+            "url":"heroku/php"
+        },
+        {
+            "url":"https://github.com/gaumire/heroku-buildpack-mysql"
+        }
+    ],
+    "environments":{
+        "test":{
+            "scripts":{
+                "test":"bash app.sh environments"
+            }
+        }
+    },
+    "stack": "heroku-16",
+    "labs": [
+        "runtime-dyno-metadata"
+    ]
+}

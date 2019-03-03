@@ -1,0 +1,28 @@
+{
+  "name": "@mozg/deploy-magento",
+  "version": "1.0.0",
+  "description": "Magento Project",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "start": "echo '#@@# scripts->start'",
+    "heroku-postbuild": "echo '#@@# scripts->heroku-postbuild'"
+  },
+  "cacheDirectories": [
+  ],
+  "dependencies": {
+    "eslint": "^5.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozgbrasil/deploy-magento.git"
+  },
+  "keywords": [
+    "deploy",
+    "magento",
+    "mozg"
+  ],
+  "license": "MIT",
+  "devDependencies": {}
+}
