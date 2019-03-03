@@ -324,6 +324,11 @@ if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
     cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
+if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
+    echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${NORMAL}"
+    cp -fr magento/vendor/prasathmani/tinyfilemanager/ .
+fi
+
 echo -e "${ONYELLOW} - ${NORMAL}"
 
 rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
