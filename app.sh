@@ -188,12 +188,13 @@ echo -e "${ONYELLOW} magento_install () { ${NORMAL}"
 
 echo -e "${ONYELLOW} pwd ${NORMAL}"
 
-pwd && ls -lah
+pwd && ls
 
-echo -e "${ONYELLOW} cd magento ${NORMAL}"
+echo -e "${ONYELLOW} path ${NORMAL}"
 
+pwd && ls
 cd magento
-pwd && ls -lah
+pwd && ls
 
 #echo -e "${ONYELLOW} Aplicando permissões ${NORMAL}"
 
@@ -270,9 +271,11 @@ echo -e "${ONYELLOW} list-upgrades ${NORMAL}"
 
 bash ./mage list-upgrades
 
-echo -e "${ONYELLOW} - ${NORMAL}"
+echo -e "${ONYELLOW} path ${NORMAL}"
 
+pwd && ls
 cd ..
+pwd && ls
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 
@@ -382,6 +385,8 @@ profile () { # Heroku, During startup, the container starts a bash shell that ru
 
 function_before
 echo -e "${ONYELLOW} profile () { ${NORMAL}"
+
+pwd && ls
 
 echo -e "${ONYELLOW} check mysql: 00:52:00 ${NORMAL}"
 
