@@ -301,14 +301,11 @@ echo -e "${ONYELLOW} post_update_cmd () { ${NORMAL}"
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 
-pwd
+pwd && ls
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 
 du -hsx ./* | sort -rh | head -10
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
 du -hsx magento/vendor/* | sort -rh | head -10
 
 echo -e "${ONYELLOW} - ${NORMAL}"
@@ -345,18 +342,12 @@ rm -fr ./magento/media/catalog/product/cache
 echo -e "${ONYELLOW} - ${NORMAL}"
 
 du -hsx ./* | sort -rh | head -10
-
-echo -e "${ONYELLOW} - ${NORMAL}"
-
 du -hsx magento/vendor/* | sort -rh | head -10
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 
 show_vars
-
 profile
-
-##
 
 echo -e "${ONYELLOW} - ${NORMAL}"
 
