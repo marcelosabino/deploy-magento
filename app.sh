@@ -326,12 +326,10 @@ if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     cp -fr magento/vendor/prasathmani/tinyfilemanager/ .
 fi
 
-echo -e "${ONYELLOW} - ${NORMAL}"
+echo -e "${ONYELLOW} FIX: Heroku, Compiled slug size: xM is too large (max is 500M). ${NORMAL}"
 
 rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
 rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
-
-# FIX: Heroku, Compiled slug size: xM is too large (max is 500M).
 
 du -hsx ./magento/media/* | sort -rh | head -10
 rm -fr ./magento/media/downloadable
