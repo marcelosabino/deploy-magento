@@ -1,5 +1,5 @@
 {
-    "name":"mozgbrasil/heroku-magento",
+    "name":"mozgbrasil/deploy-magento",
     "description":"Heroku Magento App",
     "keywords":[
         "heroku",
@@ -8,7 +8,7 @@
         "brasil"
     ],
     "website":"http://mozg.com.br/",
-    "repository":"https://github.com/mozgbrasil/heroku-magento",
+    "repository":"https://github.com/mozgbrasil/deploy-magento",
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
@@ -56,6 +56,7 @@
       }
     },
     "addons":[
+        "fixie:tricycle"
     ],
     "buildpacks":[
         {

@@ -36,7 +36,7 @@ Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) de fo
 
 Clique no botão abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/pricing) usando o plano gratuito
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/heroku-magento)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/deploy-magento)
 
 Efetue o preenchimento dos campos relativo ao banco de dados, para o campo "MAGE_URL" altere em "APP_NAME" pelo nome do aplicativo
 
@@ -58,17 +58,10 @@ https://medium.com/elefante-yogue/usando-php-com-heroku-e7d4f2fee56a
 
 ## Executando em ambiente local
 
-    git clone https://github.com/mozgbrasil/heroku-magento
+    git clone https://github.com/mozgbrasil/deploy-magento
     cp env-example .env
     nano .env
-    pwd && ls && rm -fr magento && pwd && ls && composer install -vvv --no-interaction
-      # 1 local: pre-update-cmd, post-update-cmd: command is executed without a lock file present.
-      # 2 local, heroku 2: post-install-cmd: command has been executed with a lock file present.
-
-    composer show -s -vvv
-    composer install -vvv
-    (du -hsx ./* | sort -rh | head -10)
-    (du -hsx vendor/* | sort -rh | head -10)
+    composer install
 
 ## Magento
 
@@ -94,19 +87,19 @@ Precisa de módulos para Magento, instale os módulos da MOZG em seu projeto Mag
 
 ## Demonstração
 
-<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/admin/" target="_blank">Clique aqui para acesso ao backend</a>
+<a href="http://magento1mozg.herokuapp.com/magento/index.php/admin/" target="_blank">Clique aqui para acesso ao backend</a>
 
 Utilize os seguintes dados para acesso
 
     admin / 123456a
 
-<a href="http://heroku-magento-mozg.herokuapp.com/magento/index.php/" target="_blank">Clique aqui para acesso ao frontend</a>
+<a href="http://magento1mozg.herokuapp.com/magento/index.php/" target="_blank">Clique aqui para acesso ao frontend</a>
 
 ## Recursos do projeto
 
 No uso do Composer todo os recursos é relacionado no manifesto do projeto
 
-<a href="http://heroku-magento-mozg.herokuapp.com/composer.json" target="_blank">Clique aqui para acesso manifesto do projeto</a>
+<a href="http://magento1mozg.herokuapp.com/composer.json" target="_blank">Clique aqui para acesso manifesto do projeto</a>
 
 ## Sobre temas
 
@@ -136,15 +129,15 @@ Que se trata do repositório central de bibliotecas disponibilizada via Composer
 
 ## Sobre o aplicativo para o Heroku
 
-Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-magento](https://github.com/mozgbrasil/heroku-magento), qualquer contribuição é bem vinda.
+Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/deploy-magento](https://github.com/mozgbrasil/deploy-magento), qualquer contribuição é bem vinda.
 
 # Considerações
 
 Se você gostou deste projeto, considere dar um 🌟 ou doar.
 
 - [![pagseguro](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/164x37-doar-assina.gif)](https://pagseguro.uol.com.br/checkout/v2/donation.html?currency=BRL&receiverEmail=mozgbrasil@gmail.com)
-- [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/stargazers)
-- [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/heroku-magento.svg?style=social)](https://github.com/mozgbrasil/heroku-magento/watchers)
+- [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/deploy-magento.svg?style=social)](https://github.com/mozgbrasil/deploy-magento/stargazers)
+- [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/deploy-magento.svg?style=social)](https://github.com/mozgbrasil/deploy-magento/watchers)
 
 Verifique também minha [Conta GitHub](https://github.com/mozgbrasil), onde eu tenho outros artigos e aplicativos que você pode achar interessantes.
 
