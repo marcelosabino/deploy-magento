@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c06a41beb30b46e1ee1d72c0ea2f5046",
+    "content-hash": "2ca5ef82497ee70f9714964b6e68e917",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -276,30 +276,30 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.4.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97"
+                "reference": "c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/54cacc9b81758b14e3ce750f205a393d52339e97",
-                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5",
+                "reference": "c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^6.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.6.x-dev"
                 }
             },
             "autoload": {
@@ -340,24 +340,24 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-02-24T16:22:25+00:00"
+            "time": "2017-12-06T07:11:42+00:00"
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
+                "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
-                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
+                "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "doctrine/coding-standard": "~0.1@dev",
@@ -407,36 +407,36 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-01-03T10:49:41+00:00"
+            "time": "2017-07-22T10:37:32+00:00"
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3,<8.0-DEV"
+                "php": "^7.1"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
+                "phpunit/phpunit": "^6.2.3",
+                "squizlabs/php_codesniffer": "^3.0.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -461,7 +461,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14T21:17:01+00:00"
+            "time": "2017-07-22T11:58:36+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -519,27 +519,28 @@
         },
         {
             "name": "dvdoug/boxpacker",
-            "version": "2.5.0",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dvdoug/BoxPacker.git",
-                "reference": "9c54beb8800ce6343602bc17158aa4dc56567a14"
+                "reference": "b2332bf652527e33f11bb4208e246b779a2d6ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dvdoug/BoxPacker/zipball/9c54beb8800ce6343602bc17158aa4dc56567a14",
-                "reference": "9c54beb8800ce6343602bc17158aa4dc56567a14",
+                "url": "https://api.github.com/repos/dvdoug/BoxPacker/zipball/b2332bf652527e33f11bb4208e246b779a2d6ef5",
+                "reference": "b2332bf652527e33f11bb4208e246b779a2d6ef5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
+                "php": "^7.1",
                 "psr/log": "^1.0"
             },
             "require-dev": {
                 "behat/behat": "^3.4",
+                "friendsofphp/php-cs-fixer": "^2.13",
                 "leanphp/behat-code-coverage": "^3.0",
                 "monolog/monolog": "^1.0",
-                "phpunit/phpunit": "^4.8.35||^5.0||^6.0||^7.0"
+                "phpunit/phpunit": "^7.2"
             },
             "type": "library",
             "autoload": {
@@ -574,7 +575,7 @@
                 "parcelpacking",
                 "shipping"
             ],
-            "time": "2018-11-20T21:54:11+00:00"
+            "time": "2018-11-20T22:29:22+00:00"
         },
         {
             "name": "eloquent/composer-config-reader",
@@ -994,17 +995,800 @@
             "type": "library"
         },
         {
-            "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.78",
+            "name": "hoa/compiler",
+            "version": "3.17.08.08",
             "source": {
                 "type": "git",
-                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "0f91f34d375ddd5d7034b9eaf6b74acd0b2a0ed6"
+                "url": "https://github.com/hoaproject/Compiler.git",
+                "reference": "aa09caf0bf28adae6654ca6ee415ee2f522672de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/0f91f34d375ddd5d7034b9eaf6b74acd0b2a0ed6",
-                "reference": "0f91f34d375ddd5d7034b9eaf6b74acd0b2a0ed6",
+                "url": "https://api.github.com/repos/hoaproject/Compiler/zipball/aa09caf0bf28adae6654ca6ee415ee2f522672de",
+                "reference": "aa09caf0bf28adae6654ca6ee415ee2f522672de",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0",
+                "hoa/file": "~1.0",
+                "hoa/iterator": "~2.0",
+                "hoa/math": "~1.0",
+                "hoa/protocol": "~1.0",
+                "hoa/regex": "~1.0",
+                "hoa/visitor": "~2.0"
+            },
+            "require-dev": {
+                "hoa/json": "~2.0",
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Compiler\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Compiler library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "algebraic",
+                "ast",
+                "compiler",
+                "context-free",
+                "coverage",
+                "exhaustive",
+                "grammar",
+                "isotropic",
+                "language",
+                "lexer",
+                "library",
+                "ll1",
+                "llk",
+                "parser",
+                "pp",
+                "random",
+                "regular",
+                "rule",
+                "sampler",
+                "syntax",
+                "token",
+                "trace",
+                "uniform"
+            ],
+            "time": "2017-08-08T07:44:07+00:00"
+        },
+        {
+            "name": "hoa/consistency",
+            "version": "1.17.05.02",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Consistency.git",
+                "reference": "fd7d0adc82410507f332516faf655b6ed22e4c2f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Consistency/zipball/fd7d0adc82410507f332516faf655b6ed22e4c2f",
+                "reference": "fd7d0adc82410507f332516faf655b6ed22e4c2f",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/exception": "~1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "hoa/stream": "~1.0",
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Consistency\\": "."
+                },
+                "files": [
+                    "Prelude.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Consistency library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "autoloader",
+                "callable",
+                "consistency",
+                "entity",
+                "flex",
+                "keyword",
+                "library"
+            ],
+            "time": "2017-05-02T12:18:12+00:00"
+        },
+        {
+            "name": "hoa/event",
+            "version": "1.17.01.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Event.git",
+                "reference": "6c0060dced212ffa3af0e34bb46624f990b29c54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Event/zipball/6c0060dced212ffa3af0e34bb46624f990b29c54",
+                "reference": "6c0060dced212ffa3af0e34bb46624f990b29c54",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Event\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Event library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "event",
+                "library",
+                "listener",
+                "observer"
+            ],
+            "time": "2017-01-13T15:30:50+00:00"
+        },
+        {
+            "name": "hoa/exception",
+            "version": "1.17.01.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Exception.git",
+                "reference": "091727d46420a3d7468ef0595651488bfc3a458f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Exception/zipball/091727d46420a3d7468ef0595651488bfc3a458f",
+                "reference": "091727d46420a3d7468ef0595651488bfc3a458f",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/event": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Exception\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Exception library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "exception",
+                "library"
+            ],
+            "time": "2017-01-16T07:53:27+00:00"
+        },
+        {
+            "name": "hoa/file",
+            "version": "1.17.07.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/File.git",
+                "reference": "35cb979b779bc54918d2f9a4e02ed6c7a1fa67ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/File/zipball/35cb979b779bc54918d2f9a4e02ed6c7a1fa67ca",
+                "reference": "35cb979b779bc54918d2f9a4e02ed6c7a1fa67ca",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/event": "~1.0",
+                "hoa/exception": "~1.0",
+                "hoa/iterator": "~2.0",
+                "hoa/stream": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\File\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\File library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "Socket",
+                "directory",
+                "file",
+                "finder",
+                "library",
+                "link",
+                "temporary"
+            ],
+            "time": "2017-07-11T07:42:15+00:00"
+        },
+        {
+            "name": "hoa/iterator",
+            "version": "2.17.01.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Iterator.git",
+                "reference": "d1120ba09cb4ccd049c86d10058ab94af245f0cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Iterator/zipball/d1120ba09cb4ccd049c86d10058ab94af245f0cc",
+                "reference": "d1120ba09cb4ccd049c86d10058ab94af245f0cc",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Iterator\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Iterator library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "iterator",
+                "library"
+            ],
+            "time": "2017-01-10T10:34:47+00:00"
+        },
+        {
+            "name": "hoa/math",
+            "version": "1.17.05.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Math.git",
+                "reference": "7150785d30f5d565704912116a462e9f5bc83a0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Math/zipball/7150785d30f5d565704912116a462e9f5bc83a0c",
+                "reference": "7150785d30f5d565704912116a462e9f5bc83a0c",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/compiler": "~3.0",
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0",
+                "hoa/iterator": "~2.0",
+                "hoa/protocol": "~1.0",
+                "hoa/zformat": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Math\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Math library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "arrangement",
+                "combination",
+                "combinatorics",
+                "counting",
+                "library",
+                "math",
+                "permutation",
+                "sampler",
+                "set"
+            ],
+            "time": "2017-05-16T08:02:17+00:00"
+        },
+        {
+            "name": "hoa/protocol",
+            "version": "1.17.01.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Protocol.git",
+                "reference": "5c2cf972151c45f373230da170ea015deecf19e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Protocol/zipball/5c2cf972151c45f373230da170ea015deecf19e2",
+                "reference": "5c2cf972151c45f373230da170ea015deecf19e2",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Protocol\\": "."
+                },
+                "files": [
+                    "Wrapper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Protocol library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "library",
+                "protocol",
+                "resource",
+                "stream",
+                "wrapper"
+            ],
+            "time": "2017-01-14T12:26:10+00:00"
+        },
+        {
+            "name": "hoa/regex",
+            "version": "1.17.01.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Regex.git",
+                "reference": "7e263a61b6fb45c1d03d8e5ef77668518abd5bec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Regex/zipball/7e263a61b6fb45c1d03d8e5ef77668518abd5bec",
+                "reference": "7e263a61b6fb45c1d03d8e5ef77668518abd5bec",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0",
+                "hoa/math": "~1.0",
+                "hoa/protocol": "~1.0",
+                "hoa/ustring": "~4.0",
+                "hoa/visitor": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Regex\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Regex library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "compiler",
+                "library",
+                "regex"
+            ],
+            "time": "2017-01-13T16:10:24+00:00"
+        },
+        {
+            "name": "hoa/stream",
+            "version": "1.17.02.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Stream.git",
+                "reference": "3293cfffca2de10525df51436adf88a559151d82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/3293cfffca2de10525df51436adf88a559151d82",
+                "reference": "3293cfffca2de10525df51436adf88a559151d82",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/event": "~1.0",
+                "hoa/exception": "~1.0",
+                "hoa/protocol": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Stream\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Stream library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "Context",
+                "bucket",
+                "composite",
+                "filter",
+                "in",
+                "library",
+                "out",
+                "protocol",
+                "stream",
+                "wrapper"
+            ],
+            "time": "2017-02-21T16:01:06+00:00"
+        },
+        {
+            "name": "hoa/ustring",
+            "version": "4.17.01.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Ustring.git",
+                "reference": "e6326e2739178799b1fe3fdd92029f9517fa17a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Ustring/zipball/e6326e2739178799b1fe3fdd92029f9517fa17a0",
+                "reference": "e6326e2739178799b1fe3fdd92029f9517fa17a0",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "suggest": {
+                "ext-iconv": "ext/iconv must be present (or a third implementation) to use Hoa\\Ustring::transcode().",
+                "ext-intl": "To get a better Hoa\\Ustring::toAscii() and Hoa\\Ustring::compareTo()."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Ustring\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Ustring library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "library",
+                "search",
+                "string",
+                "unicode"
+            ],
+            "time": "2017-01-16T07:08:25+00:00"
+        },
+        {
+            "name": "hoa/visitor",
+            "version": "2.17.01.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Visitor.git",
+                "reference": "c18fe1cbac98ae449e0d56e87469103ba08f224a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Visitor/zipball/c18fe1cbac98ae449e0d56e87469103ba08f224a",
+                "reference": "c18fe1cbac98ae449e0d56e87469103ba08f224a",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Visitor\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Visitor library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "library",
+                "structure",
+                "visit",
+                "visitor"
+            ],
+            "time": "2017-01-16T07:02:03+00:00"
+        },
+        {
+            "name": "hoa/zformat",
+            "version": "1.17.01.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Zformat.git",
+                "reference": "522c381a2a075d4b9dbb42eb4592dd09520e4ac2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Zformat/zipball/522c381a2a075d4b9dbb42eb4592dd09520e4ac2",
+                "reference": "522c381a2a075d4b9dbb42eb4592dd09520e4ac2",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/consistency": "~1.0",
+                "hoa/exception": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hoa\\Zformat\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Zformat library.",
+            "homepage": "https://hoa-project.net/",
+            "keywords": [
+                "library",
+                "parameter",
+                "zformat"
+            ],
+            "time": "2017-01-10T10:39:54+00:00"
+        },
+        {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.79",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "e6ce66e9c892c42898cf84a35ecbfec5b4ab481c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/e6ce66e9c892c42898cf84a35ecbfec5b4ab481c",
+                "reference": "e6ce66e9c892c42898cf84a35ecbfec5b4ab481c",
                 "shasum": ""
             },
             "require": {
@@ -1040,7 +1824,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2019-01-15T21:21:27+00:00"
+            "time": "2019-03-04T19:10:41+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -1113,33 +1897,35 @@
         },
         {
             "name": "jms/metadata",
-            "version": "1.7.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/metadata.git",
-                "reference": "e5854ab1aa643623dc64adde718a8eec32b957a8"
+                "reference": "e918c3a65105f73b74d94a0837b9f7d611d5bf0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/e5854ab1aa643623dc64adde718a8eec32b957a8",
-                "reference": "e5854ab1aa643623dc64adde718a8eec32b957a8",
+                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/e918c3a65105f73b74d94a0837b9f7d611d5bf0c",
+                "reference": "e918c3a65105f73b74d94a0837b9f7d611d5bf0c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^7.2"
             },
             "require-dev": {
-                "doctrine/cache": "~1.0",
-                "symfony/cache": "~3.1"
+                "doctrine/cache": "^1.0",
+                "doctrine/coding-standard": "^4.0",
+                "phpunit/phpunit": "^7.0",
+                "symfony/cache": "^3.1|^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Metadata\\": "src/"
                 }
             },
@@ -1164,100 +1950,65 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2018-10-26T12:40:10+00:00"
-        },
-        {
-            "name": "jms/parser-lib",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/parser-lib.git",
-                "reference": "c509473bc1b4866415627af0e1c6cc8ac97fa51d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/parser-lib/zipball/c509473bc1b4866415627af0e1c6cc8ac97fa51d",
-                "reference": "c509473bc1b4866415627af0e1c6cc8ac97fa51d",
-                "shasum": ""
-            },
-            "require": {
-                "phpoption/phpoption": ">=0.9,<2.0-dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "JMS\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "description": "A library for easily creating recursive-descent parsers.",
-            "time": "2012-11-18T18:08:43+00:00"
+            "time": "2018-11-09T13:57:43+00:00"
         },
         {
             "name": "jms/serializer",
-            "version": "1.13.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "00863e1d55b411cc33ad3e1de09a4c8d3aae793c"
+                "reference": "3c3d4f1b97738722c7da36ce42ae62911ccf6794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/00863e1d55b411cc33ad3e1de09a4c8d3aae793c",
-                "reference": "00863e1d55b411cc33ad3e1de09a4c8d3aae793c",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/3c3d4f1b97738722c7da36ce42ae62911ccf6794",
+                "reference": "3c3d4f1b97738722c7da36ce42ae62911ccf6794",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.0",
                 "doctrine/instantiator": "^1.0.3",
-                "jms/metadata": "^1.3",
-                "jms/parser-lib": "1.*",
-                "php": "^5.5|^7.0",
-                "phpcollection/phpcollection": "~0.1",
-                "phpoption/phpoption": "^1.1"
+                "hoa/compiler": "^3.17.08.08",
+                "jms/metadata": "^2.0",
+                "php": "^7.2"
             },
             "conflict": {
-                "twig/twig": "<1.12"
+                "hoa/consistency": "<1.17.05.02",
+                "hoa/core": "*",
+                "hoa/iterator": "<2.16.03.15"
             },
             "require-dev": {
+                "doctrine/coding-standard": "^5.0",
                 "doctrine/orm": "~2.1",
                 "doctrine/phpcr-odm": "^1.3|^2.0",
                 "ext-pdo_sqlite": "*",
                 "jackalope/jackalope-doctrine-dbal": "^1.1.5",
-                "phpunit/phpunit": "^4.8|^5.0",
-                "propel/propel1": "~1.7",
+                "phpunit/phpunit": "^7.1",
                 "psr/container": "^1.0",
-                "symfony/dependency-injection": "^2.7|^3.3|^4.0",
-                "symfony/expression-language": "^2.6|^3.0",
-                "symfony/filesystem": "^2.1",
-                "symfony/form": "~2.1|^3.0",
-                "symfony/translation": "^2.1|^3.0",
-                "symfony/validator": "^2.2|^3.0",
-                "symfony/yaml": "^2.1|^3.0",
-                "twig/twig": "~1.12|~2.0"
+                "symfony/dependency-injection": "^3.0|^4.0",
+                "symfony/expression-language": "^3.0|^4.0",
+                "symfony/filesystem": "^3.0|^4.0",
+                "symfony/form": "^3.0|^4.0",
+                "symfony/translation": "^3.0|^4.0",
+                "symfony/validator": "^3.1.9|^4.0",
+                "symfony/yaml": "^3.3|^4.0",
+                "twig/twig": "^1.12|^2.0"
             },
             "suggest": {
                 "doctrine/cache": "Required if you like to use cache functionality.",
                 "doctrine/collections": "Required if you like to use doctrine collection types as ArrayCollection.",
-                "symfony/yaml": "Required if you'd like to serialize data to YAML format."
+                "symfony/yaml": "Required if you'd like to use the YAML metadata format."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.13-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "JMS\\Serializer": "src/"
+                "psr-4": {
+                    "JMS\\Serializer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1283,7 +2034,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2018-07-25T13:58:54+00:00"
+            "time": "2019-02-27T20:38:28+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -1640,21 +2391,21 @@
             "time": "2019-02-07T18:01:35+00:00"
         },
         {
-            "name": "mozgbrasil/magento-bancodobrasil-php_56",
+            "name": "mozgbrasil/magento-bancodobrasil-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bancodobrasil-php_56.git",
-                "reference": "f0a6c8fe2bcd4b134594525d9b6b68b021bb97ba"
+                "url": "https://github.com/mozgbrasil/magento-bancodobrasil-php_72.git",
+                "reference": "342e3c8125086d3967e60729e22dca05dd8026bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bancodobrasil-php_56/zipball/f0a6c8fe2bcd4b134594525d9b6b68b021bb97ba",
-                "reference": "f0a6c8fe2bcd4b134594525d9b6b68b021bb97ba",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bancodobrasil-php_72/zipball/342e3c8125086d3967e60729e22dca05dd8026bf",
+                "reference": "342e3c8125086d3967e60729e22dca05dd8026bf",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1679,25 +2430,25 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-base-php_56",
+            "name": "mozgbrasil/magento-base-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-base-php_56.git",
-                "reference": "0f129ad9c9778972a406f34e752c5c509de515a3"
+                "url": "https://github.com/mozgbrasil/magento-base-php_72.git",
+                "reference": "669cd29c0e5419ef755a5c31fdf6e15f7471bd4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php_56/zipball/0f129ad9c9778972a406f34e752c5c509de515a3",
-                "reference": "0f129ad9c9778972a406f34e752c5c509de515a3",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php_72/zipball/669cd29c0e5419ef755a5c31fdf6e15f7471bd4f",
+                "reference": "669cd29c0e5419ef755a5c31fdf6e15f7471bd4f",
                 "shasum": ""
             },
             "require": {
                 "magento-hackathon/magento-composer-installer": "~3.0",
-                "mozgbrasil/php-framework-php_56": "dev-master"
+                "mozgbrasil/php-framework-php_72": "dev-master"
             },
             "suggest": {
                 "aoepeople/aoe_scheduler": "Magento Cron Scheduler",
@@ -1730,26 +2481,26 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-09-10T12:08:11+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-boxpacker-php_56",
+            "name": "mozgbrasil/magento-boxpacker-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-boxpacker-php_56.git",
-                "reference": "9540949887df2d2a16b2b3f320d50d0a5700ede9"
+                "url": "https://github.com/mozgbrasil/magento-boxpacker-php_72.git",
+                "reference": "2e4c27fbf5d14b347a3b566a5fa0abddf8165726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php_56/zipball/9540949887df2d2a16b2b3f320d50d0a5700ede9",
-                "reference": "9540949887df2d2a16b2b3f320d50d0a5700ede9",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php_72/zipball/2e4c27fbf5d14b347a3b566a5fa0abddf8165726",
+                "reference": "2e4c27fbf5d14b347a3b566a5fa0abddf8165726",
                 "shasum": ""
             },
             "require": {
                 "dvdoug/boxpacker": "*",
-                "mozgbrasil/magento-base-php_56": "dev-master",
-                "mozgbrasil/magento-product-page-shipping-php_56": "dev-master"
+                "mozgbrasil/magento-base-php_72": "dev-master",
+                "mozgbrasil/magento-product-page-shipping-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1775,24 +2526,24 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-bradesco-php_56",
+            "name": "mozgbrasil/magento-bradesco-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bradesco-php_56.git",
-                "reference": "f5feca732ebc5b0310590f7b9f00812b1c368440"
+                "url": "https://github.com/mozgbrasil/magento-bradesco-php_72.git",
+                "reference": "2e176e97247892d8b56e639d5429f0095b614ddc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php_56/zipball/f5feca732ebc5b0310590f7b9f00812b1c368440",
-                "reference": "f5feca732ebc5b0310590f7b9f00812b1c368440",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php_72/zipball/2e176e97247892d8b56e639d5429f0095b614ddc",
+                "reference": "2e176e97247892d8b56e639d5429f0095b614ddc",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1817,7 +2568,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
             "name": "mozgbrasil/magento-brasil-regions",
@@ -1860,21 +2611,21 @@
             "time": "2016-05-17T19:09:26+00:00"
         },
         {
-            "name": "mozgbrasil/magento-braspag-php_56",
+            "name": "mozgbrasil/magento-braspag-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-braspag-php_56.git",
-                "reference": "67cea467396a3c24d6a4ba0aa53373a08afd3297"
+                "url": "https://github.com/mozgbrasil/magento-braspag-php_72.git",
+                "reference": "892dabf408bd76e1754e1d6ce3d53707268d5632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php_56/zipball/67cea467396a3c24d6a4ba0aa53373a08afd3297",
-                "reference": "67cea467396a3c24d6a4ba0aa53373a08afd3297",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php_72/zipball/892dabf408bd76e1754e1d6ce3d53707268d5632",
+                "reference": "892dabf408bd76e1754e1d6ce3d53707268d5632",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1899,42 +2650,42 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-09-03T12:22:38+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-bundle-php_56",
+            "name": "mozgbrasil/magento-bundle-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bundle-php_56.git",
-                "reference": "4c9fcba11bbe5fa2b7ec2e18e51ee12c936a4ec3"
+                "url": "https://github.com/mozgbrasil/magento-bundle-php_72.git",
+                "reference": "c7b147c13ff27cfccabb488bae4a82daf8335d10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php_56/zipball/4c9fcba11bbe5fa2b7ec2e18e51ee12c936a4ec3",
-                "reference": "4c9fcba11bbe5fa2b7ec2e18e51ee12c936a4ec3",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php_72/zipball/c7b147c13ff27cfccabb488bae4a82daf8335d10",
+                "reference": "c7b147c13ff27cfccabb488bae4a82daf8335d10",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-bancodobrasil-php_56": "dev-master",
-                "mozgbrasil/magento-bradesco-php_56": "dev-master",
+                "mozgbrasil/magento-bancodobrasil-php_72": "dev-master",
+                "mozgbrasil/magento-bradesco-php_72": "dev-master",
                 "mozgbrasil/magento-brasil-regions": "dev-master",
-                "mozgbrasil/magento-braspag-php_56": "dev-master",
-                "mozgbrasil/magento-checkout-filters-php_56": "dev-master",
-                "mozgbrasil/magento-cielo-php_56": "dev-master",
-                "mozgbrasil/magento-clearsale-php_56": "dev-master",
-                "mozgbrasil/magento-correios-php_56": "dev-master",
-                "mozgbrasil/magento-customer-php_56": "dev-master",
-                "mozgbrasil/magento-itau-php_56": "dev-master",
+                "mozgbrasil/magento-braspag-php_72": "dev-master",
+                "mozgbrasil/magento-checkout-filters-php_72": "dev-master",
+                "mozgbrasil/magento-cielo-php_72": "dev-master",
+                "mozgbrasil/magento-clearsale-php_72": "dev-master",
+                "mozgbrasil/magento-correios-php_72": "dev-master",
+                "mozgbrasil/magento-customer-php_72": "dev-master",
+                "mozgbrasil/magento-itau-php_72": "dev-master",
                 "mozgbrasil/magento-iwd-opc": "dev-master",
-                "mozgbrasil/magento-jadlog-php_56": "dev-master",
-                "mozgbrasil/magento-jamef-php_56": "dev-master",
+                "mozgbrasil/magento-jadlog-php_72": "dev-master",
+                "mozgbrasil/magento-jamef-php_72": "dev-master",
                 "mozgbrasil/magento-locale-pt_br": "dev-master",
-                "mozgbrasil/magento-loggi-php_56": "dev-master",
-                "mozgbrasil/magento-pagseguro-php_56": "dev-master",
-                "mozgbrasil/magento-rede-php_56": "dev-master",
-                "mozgbrasil/magento-redecard-php_56": "dev-master",
-                "mozgbrasil/magento-squidfacil-php_56": "dev-master"
+                "mozgbrasil/magento-loggi-php_72": "dev-master",
+                "mozgbrasil/magento-pagseguro-php_72": "dev-master",
+                "mozgbrasil/magento-rede-php_72": "dev-master",
+                "mozgbrasil/magento-redecard-php_72": "dev-master",
+                "mozgbrasil/magento-squidfacil-php_72": "dev-master"
             },
             "type": "metapackage",
             "notification-url": "https://packagist.org/downloads/",
@@ -1957,24 +2708,24 @@
                 "metapackage",
                 "mozg"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-checkout-filters-php_56",
+            "name": "mozgbrasil/magento-checkout-filters-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php_56.git",
-                "reference": "0ef1aaf43bd0ed1b29696d4f158f541c7e689401"
+                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php_72.git",
+                "reference": "4fabe1ec5752b578aa77ee2e4b3c77e51bd2d921"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php_56/zipball/0ef1aaf43bd0ed1b29696d4f158f541c7e689401",
-                "reference": "0ef1aaf43bd0ed1b29696d4f158f541c7e689401",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php_72/zipball/4fabe1ec5752b578aa77ee2e4b3c77e51bd2d921",
+                "reference": "4fabe1ec5752b578aa77ee2e4b3c77e51bd2d921",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php_56": "dev-master"
+                "mozgbrasil/magento-base-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1998,24 +2749,24 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-cielo-php_56",
+            "name": "mozgbrasil/magento-cielo-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-cielo-php_56.git",
-                "reference": "a57629c6a05d84c54108b115adf99005347b8ef8"
+                "url": "https://github.com/mozgbrasil/magento-cielo-php_72.git",
+                "reference": "51ea8f98428fd480acf7206308fd6ee601fd160e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php_56/zipball/a57629c6a05d84c54108b115adf99005347b8ef8",
-                "reference": "a57629c6a05d84c54108b115adf99005347b8ef8",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php_72/zipball/51ea8f98428fd480acf7206308fd6ee601fd160e",
+                "reference": "51ea8f98428fd480acf7206308fd6ee601fd160e",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2040,24 +2791,24 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-09-03T12:22:38+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-clearsale-php_56",
+            "name": "mozgbrasil/magento-clearsale-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-clearsale-php_56.git",
-                "reference": "964690fd888607d62feb5f5ba464a486a0157c9c"
+                "url": "https://github.com/mozgbrasil/magento-clearsale-php_72.git",
+                "reference": "9274d0aa161545ef58f2e8080dd23c60299eca56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php_56/zipball/964690fd888607d62feb5f5ba464a486a0157c9c",
-                "reference": "964690fd888607d62feb5f5ba464a486a0157c9c",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php_72/zipball/9274d0aa161545ef58f2e8080dd23c60299eca56",
+                "reference": "9274d0aa161545ef58f2e8080dd23c60299eca56",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php_56": "dev-master"
+                "mozgbrasil/magento-base-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2081,24 +2832,24 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-correios-php_56",
+            "name": "mozgbrasil/magento-correios-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-correios-php_56.git",
-                "reference": "b374f637c43fe806ca075bf9e7b36fb86155c59e"
+                "url": "https://github.com/mozgbrasil/magento-correios-php_72.git",
+                "reference": "2f81a1442b6b475afe20b73c77b673d2a4d08e19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php_56/zipball/b374f637c43fe806ca075bf9e7b36fb86155c59e",
-                "reference": "b374f637c43fe806ca075bf9e7b36fb86155c59e",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php_72/zipball/2f81a1442b6b475afe20b73c77b673d2a4d08e19",
+                "reference": "2f81a1442b6b475afe20b73c77b673d2a4d08e19",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2125,24 +2876,24 @@
                 "sigep",
                 "transporte"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-customer-php_56",
+            "name": "mozgbrasil/magento-customer-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-customer-php_56.git",
-                "reference": "fc1f3885e58fe01ded9c2281529a6a739874bfdc"
+                "url": "https://github.com/mozgbrasil/magento-customer-php_72.git",
+                "reference": "0d34fdda722ee864ba8e3f8e48710139097bbeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php_56/zipball/fc1f3885e58fe01ded9c2281529a6a739874bfdc",
-                "reference": "fc1f3885e58fe01ded9c2281529a6a739874bfdc",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php_72/zipball/0d34fdda722ee864ba8e3f8e48710139097bbeff",
+                "reference": "0d34fdda722ee864ba8e3f8e48710139097bbeff",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php_56": "dev-master",
+                "mozgbrasil/magento-base-php_72": "dev-master",
                 "mozgbrasil/magento-brasil-regions": "*"
             },
             "type": "magento-module",
@@ -2168,20 +2919,20 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-fee-php_56",
+            "name": "mozgbrasil/magento-fee-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-fee-php_56.git",
-                "reference": "e33cac8095f5f749dda129ee531510db1c97f6d5"
+                "url": "https://github.com/mozgbrasil/magento-fee-php_72.git",
+                "reference": "3363bbe3214b7fb9d59a9cbbb900d7c5bbc9db6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php_56/zipball/e33cac8095f5f749dda129ee531510db1c97f6d5",
-                "reference": "e33cac8095f5f749dda129ee531510db1c97f6d5",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php_72/zipball/3363bbe3214b7fb9d59a9cbbb900d7c5bbc9db6a",
+                "reference": "3363bbe3214b7fb9d59a9cbbb900d7c5bbc9db6a",
                 "shasum": ""
             },
             "type": "magento-module",
@@ -2208,25 +2959,25 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-itau-php_56",
+            "name": "mozgbrasil/magento-itau-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-itau-php_56.git",
-                "reference": "c1506778ed63a6361d34482bfaa72d460e57515e"
+                "url": "https://github.com/mozgbrasil/magento-itau-php_72.git",
+                "reference": "727a269bf7362dd890f582772eaf7f10d72f0e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php_56/zipball/c1506778ed63a6361d34482bfaa72d460e57515e",
-                "reference": "c1506778ed63a6361d34482bfaa72d460e57515e",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php_72/zipball/727a269bf7362dd890f582772eaf7f10d72f0e47",
+                "reference": "727a269bf7362dd890f582772eaf7f10d72f0e47",
                 "shasum": ""
             },
             "require": {
                 "dilneiss/itaubankline": "*",
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2251,7 +3002,7 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
             "name": "mozgbrasil/magento-iwd-all",
@@ -2334,21 +3085,21 @@
             "time": "2017-01-27T10:29:01+00:00"
         },
         {
-            "name": "mozgbrasil/magento-jadlog-php_56",
+            "name": "mozgbrasil/magento-jadlog-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jadlog-php_56.git",
-                "reference": "54485e0dfda9a1868fdfd94702af22acb814c6a1"
+                "url": "https://github.com/mozgbrasil/magento-jadlog-php_72.git",
+                "reference": "a40de116365a397f14c1363ef7093d385cdd8629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php_56/zipball/54485e0dfda9a1868fdfd94702af22acb814c6a1",
-                "reference": "54485e0dfda9a1868fdfd94702af22acb814c6a1",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php_72/zipball/a40de116365a397f14c1363ef7093d385cdd8629",
+                "reference": "a40de116365a397f14c1363ef7093d385cdd8629",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2374,24 +3125,24 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-jamef-php_56",
+            "name": "mozgbrasil/magento-jamef-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jamef-php_56.git",
-                "reference": "c086cd55152dfae7e17c9d23f1a5d4f67d488120"
+                "url": "https://github.com/mozgbrasil/magento-jamef-php_72.git",
+                "reference": "0a35313edce84e33ba6d76f3e6a9e5a3a10590c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php_56/zipball/c086cd55152dfae7e17c9d23f1a5d4f67d488120",
-                "reference": "c086cd55152dfae7e17c9d23f1a5d4f67d488120",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php_72/zipball/0a35313edce84e33ba6d76f3e6a9e5a3a10590c0",
+                "reference": "0a35313edce84e33ba6d76f3e6a9e5a3a10590c0",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2417,7 +3168,7 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
             "name": "mozgbrasil/magento-locale-pt_br",
@@ -2460,21 +3211,21 @@
             "time": "2018-04-12T16:06:40+00:00"
         },
         {
-            "name": "mozgbrasil/magento-loggi-php_56",
+            "name": "mozgbrasil/magento-loggi-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-loggi-php_56.git",
-                "reference": "16ed1da2c20153bced645a8335c282d6b5358c12"
+                "url": "https://github.com/mozgbrasil/magento-loggi-php_72.git",
+                "reference": "3f5250df44f650f3a21e8b56febf6e29be8d50e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php_56/zipball/16ed1da2c20153bced645a8335c282d6b5358c12",
-                "reference": "16ed1da2c20153bced645a8335c282d6b5358c12",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php_72/zipball/3f5250df44f650f3a21e8b56febf6e29be8d50e9",
+                "reference": "3f5250df44f650f3a21e8b56febf6e29be8d50e9",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_56": "dev-master"
+                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2501,24 +3252,24 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-pagseguro-php_56",
+            "name": "mozgbrasil/magento-pagseguro-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-pagseguro-php_56.git",
-                "reference": "ebd0883ba3c90783678629f73dd1137919b0fc21"
+                "url": "https://github.com/mozgbrasil/magento-pagseguro-php_72.git",
+                "reference": "7fed4aef9a93779a49756a7c81ba2deef9be691a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-pagseguro-php_56/zipball/ebd0883ba3c90783678629f73dd1137919b0fc21",
-                "reference": "ebd0883ba3c90783678629f73dd1137919b0fc21",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-pagseguro-php_72/zipball/7fed4aef9a93779a49756a7c81ba2deef9be691a",
+                "reference": "7fed4aef9a93779a49756a7c81ba2deef9be691a",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php_56": "dev-master",
+                "mozgbrasil/magento-payment-php_72": "dev-master",
                 "pagseguro/pagseguro-php-sdk": "*"
             },
             "type": "magento-module",
@@ -2544,25 +3295,25 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-payment-php_56",
+            "name": "mozgbrasil/magento-payment-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-payment-php_56.git",
-                "reference": "62e18c99200cf3b6b3d470e31cca5979647d4461"
+                "url": "https://github.com/mozgbrasil/magento-payment-php_72.git",
+                "reference": "b4bcb4b5f5f913cba3b0eb18c03e3f5c46fc44fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php_56/zipball/62e18c99200cf3b6b3d470e31cca5979647d4461",
-                "reference": "62e18c99200cf3b6b3d470e31cca5979647d4461",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php_72/zipball/b4bcb4b5f5f913cba3b0eb18c03e3f5c46fc44fa",
+                "reference": "b4bcb4b5f5f913cba3b0eb18c03e3f5c46fc44fa",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php_56": "dev-master",
-                "mozgbrasil/magento-fee-php_56": "dev-master"
+                "mozgbrasil/magento-base-php_72": "dev-master",
+                "mozgbrasil/magento-fee-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2586,24 +3337,24 @@
                 "mozg",
                 "payment"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-product-page-shipping-php_56",
+            "name": "mozgbrasil/magento-product-page-shipping-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php_56.git",
-                "reference": "a2355c5f4be42f6aae6ea95b329c76f69c7fd2d3"
+                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php_72.git",
+                "reference": "b5c1b0b057b7f83716e685446ac8aeae56e7fe10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php_56/zipball/a2355c5f4be42f6aae6ea95b329c76f69c7fd2d3",
-                "reference": "a2355c5f4be42f6aae6ea95b329c76f69c7fd2d3",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php_72/zipball/b5c1b0b057b7f83716e685446ac8aeae56e7fe10",
+                "reference": "b5c1b0b057b7f83716e685446ac8aeae56e7fe10",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php_56": "dev-master"
+                "mozgbrasil/magento-base-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2629,24 +3380,24 @@
                 "shipestimation",
                 "shipping"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-rede-php_56",
+            "name": "mozgbrasil/magento-rede-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-rede-php_56.git",
-                "reference": "12272db4280e8562280dfa40f475b9b5532cf5b1"
+                "url": "https://github.com/mozgbrasil/magento-rede-php_72.git",
+                "reference": "981c543e1ef7fb89584fadcdd8a92916eaa5d855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-rede-php_56/zipball/12272db4280e8562280dfa40f475b9b5532cf5b1",
-                "reference": "12272db4280e8562280dfa40f475b9b5532cf5b1",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-rede-php_72/zipball/981c543e1ef7fb89584fadcdd8a92916eaa5d855",
+                "reference": "981c543e1ef7fb89584fadcdd8a92916eaa5d855",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2671,25 +3422,25 @@
                 "payment",
                 "rede"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-redecard-php_56",
+            "name": "mozgbrasil/magento-redecard-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-redecard-php_56.git",
-                "reference": "ecc7a83c58c2e12b83ce0717e1dd2769d643e0d6"
+                "url": "https://github.com/mozgbrasil/magento-redecard-php_72.git",
+                "reference": "d2fc3ad39992b8b2a63ca5deb9bcb84107c7f3f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php_56/zipball/ecc7a83c58c2e12b83ce0717e1dd2769d643e0d6",
-                "reference": "ecc7a83c58c2e12b83ce0717e1dd2769d643e0d6",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php_72/zipball/d2fc3ad39992b8b2a63ca5deb9bcb84107c7f3f8",
+                "reference": "d2fc3ad39992b8b2a63ca5deb9bcb84107c7f3f8",
                 "shasum": ""
             },
             "require": {
                 "byjg/omnipay-komerci": "*",
-                "mozgbrasil/magento-payment-php_56": "dev-master"
+                "mozgbrasil/magento-payment-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2714,24 +3465,24 @@
                 "payment",
                 "redecard"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/magento-squidfacil-php_56",
+            "name": "mozgbrasil/magento-squidfacil-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-squidfacil-php_56.git",
-                "reference": "4a0cfac31f57380f33a1e3f715492b4f295ac0a2"
+                "url": "https://github.com/mozgbrasil/magento-squidfacil-php_72.git",
+                "reference": "c8872660702303dfa19edf284fd8949c93a52f7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-squidfacil-php_56/zipball/4a0cfac31f57380f33a1e3f715492b4f295ac0a2",
-                "reference": "4a0cfac31f57380f33a1e3f715492b4f295ac0a2",
+                "url": "https://api.github.com/repos/mozgbrasil/magento-squidfacil-php_72/zipball/c8872660702303dfa19edf284fd8949c93a52f7a",
+                "reference": "c8872660702303dfa19edf284fd8949c93a52f7a",
                 "shasum": ""
             },
             "require": {
-                "mozgbrasil/magento-base-php_56": "dev-master"
+                "mozgbrasil/magento-base-php_72": "dev-master"
             },
             "type": "magento-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -2757,20 +3508,20 @@
                 "squidfacil",
                 "transportadora"
             ],
-            "time": "2018-08-24T15:49:06+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
-            "name": "mozgbrasil/php-framework-php_56",
+            "name": "mozgbrasil/php-framework-php_72",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mozgbrasil/php-framework-php_56.git",
-                "reference": "6574d1f3c1875051fa45e0a13506cc2611782083"
+                "url": "https://github.com/mozgbrasil/php-framework-php_72.git",
+                "reference": "fc1f601534764bd81caabffeb24566c245f71b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_56/zipball/6574d1f3c1875051fa45e0a13506cc2611782083",
-                "reference": "6574d1f3c1875051fa45e0a13506cc2611782083",
+                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_72/zipball/fc1f601534764bd81caabffeb24566c245f71b90",
+                "reference": "fc1f601534764bd81caabffeb24566c245f71b90",
                 "shasum": ""
             },
             "require": {
@@ -2849,7 +3600,7 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2018-09-10T11:47:49+00:00"
+            "time": "2019-03-05T19:25:57+00:00"
         },
         {
             "name": "nategood/httpful",
@@ -3001,26 +3752,26 @@
         },
         {
             "name": "pagseguro/pagseguro-php-sdk",
-            "version": "5.0.1",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pagseguro/pagseguro-php-sdk.git",
-                "reference": "263b9e1d5ed87b082ce95d4dd3ea32e47aa536c3"
+                "reference": "de63ce3d582ba5727c42d8d4e67030da9439bff6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pagseguro/pagseguro-php-sdk/zipball/263b9e1d5ed87b082ce95d4dd3ea32e47aa536c3",
-                "reference": "263b9e1d5ed87b082ce95d4dd3ea32e47aa536c3",
+                "url": "https://api.github.com/repos/pagseguro/pagseguro-php-sdk/zipball/de63ce3d582ba5727c42d8d4e67030da9439bff6",
+                "reference": "de63ce3d582ba5727c42d8d4e67030da9439bff6",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "lib-curl": "*",
                 "lib-openssl": "*",
-                "php": "^5.6"
+                "php": "^7.1.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "autoload": {
@@ -3038,37 +3789,33 @@
                 }
             ],
             "description": "Biblioteca de integração com o PagSeguro",
-            "time": "2018-11-14T20:57:16+00:00"
+            "time": "2018-12-11T11:37:37+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.18",
+            "version": "v9.99.99",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
+                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
-                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
+                "php": "^7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/random.php"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -3087,105 +3834,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2019-01-03T20:59:08+00:00"
-        },
-        {
-            "name": "phpcollection/phpcollection",
-            "version": "0.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/php-collection.git",
-                "reference": "f2bcff45c0da7c27991bbc1f90f47c4b7fb434a6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-collection/zipball/f2bcff45c0da7c27991bbc1f90f47c4b7fb434a6",
-                "reference": "f2bcff45c0da7c27991bbc1f90f47c4b7fb434a6",
-                "shasum": ""
-            },
-            "require": {
-                "phpoption/phpoption": "1.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "PhpCollection": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "General-Purpose Collection Library for PHP",
-            "keywords": [
-                "collection",
-                "list",
-                "map",
-                "sequence",
-                "set"
-            ],
-            "time": "2015-05-17T12:39:23+00:00"
-        },
-        {
-            "name": "phpoption/phpoption",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/94e644f7d2051a5f0fcf77d81605f152eecff0ed",
-                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.7.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "PhpOption\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Option Type for PHP",
-            "keywords": [
-                "language",
-                "option",
-                "php",
-                "type"
-            ],
-            "time": "2015-07-25T16:39:46+00:00"
+            "time": "2018-07-02T15:55:56+00:00"
         },
         {
             "name": "prasathmani/tinyfilemanager",
@@ -3437,28 +4086,29 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.3",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
+                "reference": "720fcc7e9b5cf384ea68d9d930d480907a0c1a29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
-                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/720fcc7e9b5cf384ea68d9d930d480907a0c1a29",
+                "reference": "720fcc7e9b5cf384ea68d9d930d480907a0c1a29",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+                "phpunit/phpunit": "^7.5 || ^8.0",
+                "symfony/process": "^2 || ^3.3 || ^4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -3483,38 +4133,40 @@
             "description": "Diff implementation",
             "homepage": "https://github.com/sebastianbergmann/diff",
             "keywords": [
-                "diff"
+                "diff",
+                "udiff",
+                "unidiff",
+                "unified diff"
             ],
-            "time": "2017-05-22T07:24:03+00:00"
+            "time": "2019-02-04T06:01:07+00:00"
         },
         {
             "name": "stichoza/google-translate-php",
-            "version": "v3.2.14",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Stichoza/google-translate-php.git",
-                "reference": "2ad0de0c69c99cf5bb78a376b349e2fde595eec9"
+                "reference": "612d79e129176c67ed0c094165746c63c4cba1e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/2ad0de0c69c99cf5bb78a376b349e2fde595eec9",
-                "reference": "2ad0de0c69c99cf5bb78a376b349e2fde595eec9",
+                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/612d79e129176c67ed0c094165746c63c4cba1e3",
+                "reference": "612d79e129176c67ed0c094165746c63c4cba1e3",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
                 "guzzlehttp/guzzle": "~6.0",
-                "php": ">=5.5.0"
+                "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Stichoza\\GoogleTranslate\\": "src/"
-                },
                 "psr-4": {
-                    "Stichoza\\GoogleTranslate\\": "src/Stichoza/GoogleTranslate/"
+                    "Stichoza\\GoogleTranslate\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3532,9 +4184,10 @@
             "keywords": [
                 "google",
                 "php",
-                "translate"
+                "translate",
+                "translator"
             ],
-            "time": "2018-06-26T08:24:07+00:00"
+            "time": "2018-12-04T00:15:54+00:00"
         },
         {
             "name": "sunra/dbug",
@@ -3657,32 +4310,32 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.23",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "8d8a9e877b3fcdc50ddecf8dcea146059753f782"
+                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/8d8a9e877b3fcdc50ddecf8dcea146059753f782",
-                "reference": "8d8a9e877b3fcdc50ddecf8dcea146059753f782",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/de73f48977b8eaf7ce22814d66e43a1662cc864f",
+                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
+                "php": "^7.1.3",
                 "psr/log": "~1.0"
             },
             "conflict": {
-                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+                "symfony/http-kernel": "<3.4"
             },
             "require-dev": {
-                "symfony/http-kernel": "~2.8|~3.0|~4.0"
+                "symfony/http-kernel": "~3.4|~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -3709,7 +4362,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-24T15:45:11+00:00"
+            "time": "2019-03-03T18:11:24+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3944,6 +4597,61 @@
             "time": "2018-09-21T06:26:08+00:00"
         },
         {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v3.4.23",
             "source": {
@@ -3994,38 +4702,45 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.23",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "d34d10236300876d14291e9df85c6ef3d3bb9066"
+                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/d34d10236300876d14291e9df85c6ef3d3bb9066",
-                "reference": "d34d10236300876d14291e9df85c6ef3d3bb9066",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9f87189ac10b42edf7fb8edc846f1937c6d157cf",
+                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
             },
             "conflict": {
-                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
             },
             "require-dev": {
                 "ext-iconv": "*",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
                 "twig/twig": "~1.34|~2.4"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
                 "ext-intl": "To show region name in time zone dump",
-                "ext-symfony_debug": ""
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
             },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -4059,7 +4774,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-02-23T15:06:07+00:00"
+            "time": "2019-02-23T15:17:42+00:00"
         },
         {
             "name": "tecnickcom/tcpdf",
@@ -4593,7 +5308,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mozgbrasil/magento-bundle-php_56": 20
+        "mozgbrasil/magento-bundle-php_72": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

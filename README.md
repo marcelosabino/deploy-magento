@@ -4,15 +4,11 @@
 [getcomposer]: https://getcomposer.org/
 [uninstall-mods]: https://getcomposer.org/doc/03-cli.md#remove
 
-# Heroku\Magento
-
-## Demonstração
-
-[![Clique para visualizar o vídeo](https://img.youtube.com/vi/-cT1mqkdi_E/0.jpg)](https://youtu.be/-cT1mqkdi_E "Clique para visualizar o vídeo")
+# Deploy\Magento
 
 ## Sinopse
 
-Automação para criação de projeto [Magento](https://magento.com/) na [Heroku](https://www.heroku.com/)
+Automação para implantação de projeto [Magento](https://magento.com/)
 
 ## Motivação
 
@@ -25,12 +21,6 @@ Para o aplicativo o Heroku usa o arquvo [app.json](app.json)
 Para a implantação o Heroku usa o arquvo [composer.json](composer.json)
 
 Como a Heroku trabalha com o [Composer](https://getcomposer.org/), todas as dependências a ser usada no projeto está registrada no arquivo [composer.json](composer.json)
-
-## Descrição
-
-Olá
-
-Tenha sua loja virtual usando a plataforma [Magento](https://magento.com/) de forma fácil
 
 ## Implantando na Heroku
 
@@ -48,9 +38,9 @@ Clique no botão "View"
 
 Será carregado o aplicativo exibindo o diretório raiz, acesse a pasta magento para utilizar a plataforma
 
-    O aplicativo ainda não suporta a importação do sample data, a melhor solução é importar o banco antes de implantar o aplicativo na Heroku
+    Importe o banco de dados de um projeto funcional antes de utilizar o aplicativo
 
-    No uso do HTTPS não carrega o projeto ou é carregado com lentidão, não usar
+    Não utilize HTTPS
 
 ## Útil
 

@@ -56,7 +56,6 @@
       }
     },
     "addons":[
-        "fixie:tricycle"
     ],
     "buildpacks":[
         {
@@ -73,7 +72,7 @@
             }
         }
     },
-    "stack": "heroku-16",
+    "stack": "heroku-18",
     "labs": [
         "runtime-dyno-metadata"
     ]
