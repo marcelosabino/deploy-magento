@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ca5ef82497ee70f9714964b6e68e917",
+    "content-hash": "9dd8ba23255e8e6d15b48b981b8a5225",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -3516,12 +3516,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mozgbrasil/php-framework-php_72.git",
-                "reference": "fc1f601534764bd81caabffeb24566c245f71b90"
+                "reference": "131792aa590bc17f27c3f472942547f83c86744e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_72/zipball/fc1f601534764bd81caabffeb24566c245f71b90",
-                "reference": "fc1f601534764bd81caabffeb24566c245f71b90",
+                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_72/zipball/131792aa590bc17f27c3f472942547f83c86744e",
+                "reference": "131792aa590bc17f27c3f472942547f83c86744e",
                 "shasum": ""
             },
             "require": {
@@ -3532,7 +3532,6 @@
                 "ext-hash": "*",
                 "ext-iconv": "*",
                 "ext-intl": "*",
-                "ext-mcrypt": "*",
                 "ext-openssl": "*",
                 "ext-pdo": "*",
                 "ext-simplexml": "*",
@@ -3600,7 +3599,7 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "time": "2019-03-05T22:17:08+00:00"
         },
         {
             "name": "nategood/httpful",
@@ -5313,7 +5312,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.0 <7.3.0"
+        "php": "~7.1.3||~7.2.0"
     },
     "platform-dev": []
 }
