@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dd8ba23255e8e6d15b48b981b8a5225",
+    "content-hash": "961e7d61e6932aed3173ec62b42fdd17",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",

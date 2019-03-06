@@ -97,7 +97,7 @@
     },
     "extra":{
         "magento-root-dir":"magento/",
-        "magento-deploystrategy": "symlink",
+        "magento-deploystrategy": "copy",
         "magento-force": true
     },
     "scripts": {

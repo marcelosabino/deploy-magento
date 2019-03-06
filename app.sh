@@ -342,7 +342,7 @@ echo -e "${ONYELLOW} - ${NORMAL}"
 du -hsx ./* | sort -rh | head -10
 du -hsx magento/vendor/* | sort -rh | head -10
 
-echo -e "${ONYELLOW} - ${NORMAL}"
+echo -e "${ONYELLOW} installer ${NORMAL}"
 
 show_vars
 profile

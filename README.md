@@ -61,6 +61,18 @@ Atualmente um projeto Magento ideal é gerenciado completamente pelo Composer, a
 - [✓] Módulos sempre atualizados;
 - [✓] Template sempre atualizado;
 
+Veja esse vídeo onde eu demonstro a atualização do Magento via Composer
+
+https://www.youtube.com/watch?v=QT1bIyqZaos
+
+Utilize o Composer e tenha sempre um projeto atualizado
+
+Sobre templates, considero a melhor prática o uso do template da empresa Porto, descentralizando esse processo e obtendo atualizações recorrentes dessa equipe
+
+http://www.portotheme.com/magento/porto_landing/
+
+Veja as diversas possibilidades de temas, todos altamente customizável
+
 Precisa de um projeto para ação de Comércio eletrônico, utilize a melhor plataforma, utilize o Magento, entre em contato conosco
 
 Conheça a nossa trajetória de sucesso construída com muito empenho, compromisso, ética e profissionalismo.
