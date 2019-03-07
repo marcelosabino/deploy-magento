@@ -317,20 +317,19 @@ echo -e "${ONYELLOW} - ${RESETCOLOR}"
 if [ -d magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media ]; then
     echo -e "${ONYELLOW} mozgbrasil/magento-sample-data-1.9.2.4 ${RESETCOLOR}"
     echo -e "${ONYELLOW} FIX: Heroku, Compiled slug size: 823M is too large (max is 500M). ${RESETCOLOR}"
-    #mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
-    #mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
+    mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
+    mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
 fi
 
 if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
     echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${RESETCOLOR}"
-    cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
+    mv -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
 if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${RESETCOLOR}"
-    cp -fr magento/vendor/prasathmani/tinyfilemanager/ .
+    mv -fr magento/vendor/prasathmani/tinyfilemanager/ .
 fi
-
 
 du -hsx ./magento/media/* | sort -rh | head -10
 rm -fr ./magento/media/downloadable
