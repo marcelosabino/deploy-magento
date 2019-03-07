@@ -20,12 +20,18 @@ BASE_PATH_USER=~
 FOLDER_CACHE=$BASE_PATH_USER'/dados/softwares'
 
 # Define text styles
-#BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
-#NORMAL=`tput sgr0`
-BOLD=$(tput bold)
-NORMAL=$(tput sgr0)
-#BOLD=''
-#NORMAL=''
+echo $SHELL
+echo
+echo $TERM
+if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
+  #BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
+  #NORMAL=`tput sgr0`
+  BOLD=$(tput bold)
+  NORMAL=$(tput sgr0)
+else
+  BOLD=''
+  NORMAL=''
+fi
 
 # Reset
 RESETCOLOR='\e[0m'       # Text Reset
@@ -342,7 +348,7 @@ echo -e "${ONYELLOW} - ${NORMAL}"
 du -hsx ./* | sort -rh | head -10
 du -hsx magento/vendor/* | sort -rh | head -10
 
-echo -e "${ONYELLOW} installer ${NORMAL}"
+echo -e "${ONYELLOW} - ${NORMAL}"
 
 show_vars
 profile
@@ -382,23 +388,23 @@ echo -e "${ONYELLOW} profile () { ${NORMAL}"
 
 pwd && ls
 
-echo -e "${ONYELLOW} check mysql: 00:52:00 ${NORMAL}"
+echo -e "${ONYELLOW} check mysql ${NORMAL}"
 
 if type mysql >/dev/null 2>&1; then
 
   echo "mysql installed"
 
-  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-    echo -e "${RED} local.xml = null ${NORMAL}"
-    if [ -f ".env" ] ; then # if file exits
-      echo -e "${RED} .env ${NORMAL}"
-      magento_sample_data_import_haifeng
-      magento_install
-    fi    
+  if [ -f ".env" ] ; then # if file exits, only local
+    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+        magento_sample_data_import_haifeng
+        magento_install
+    fi
   fi
 
-  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-    magento_config_xml
+  if [ ! -f ".env" ] ; then # if file not exits, only heroku ...
+    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+      magento_config_xml
+    fi
   fi
 
 else

@@ -44,6 +44,10 @@
           "description": "",
           "value": "true"
         },
+        "MAGE_PROFILER":{
+          "description": "",
+          "value": "true"
+        },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",
             "generator":"secret"
