@@ -41,6 +41,18 @@
         {
             "type": "package",
             "package": {
+                "name": "mozgbrasil/magento-sample-data-1.9.2.4",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/mozgbrasil/magento-sample-data-1.9.2.4.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "prasathmani/tinyfilemanager",
                 "version": "1.0.0",
                 "source":{
@@ -68,6 +80,7 @@
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
         "firegento/magento": "~1.9.4.0",
+        "mozgbrasil/magento-sample-data-1.9.2.4": "1.0.*",
         "prasathmani/tinyfilemanager": "1.0.*",
         "ceckoslab/ceckoslab_quicklogin": "1.0.*",
         "mozgbrasil/magento-bundle-php_72": "dev-master"

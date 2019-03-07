@@ -71,7 +71,6 @@ echo
 }
 
 function_after () {
-echo
 echo -e "${ONYELLOW}}${RESETCOLOR}"
 echo
 }
@@ -163,18 +162,18 @@ magento_sample_data_import_haifeng () {
 function_before
 echo -e "${ONYELLOW} magento_sample_data_import_haifeng () { ${RESETCOLOR}"
 
-#grep -ri 'LOCK TABLE' magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql
+#grep -ri 'LOCK TABLE' magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql
 
 # FIX Heroku: permission, LOCK TABLE
-awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4.sql > magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
+awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql > magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql
 
-#grep -ri 'LOCK TABLE' magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql
+#grep -ri 'LOCK TABLE' magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql
 
 echo -e "${ONYELLOW} Importando... ${RESETCOLOR}"
 
 if [ -f ".env" ] ; then # if file not exits, only local
     echo -e "${RED} .env ${RESETCOLOR}"
-    MYSQL_IMPORT=`mysql -h "${MAGE_DB_HOST}" -P "${MAGE_DB_PORT}" -u "${MAGE_DB_USER}" -p"${MAGE_DB_PASS}" "${MAGE_DB_NAME}" < 'magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/magento_sample_data_for_1.9.2.4_unlock.sql'` # Heroku, Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+    MYSQL_IMPORT=`mysql -h "${MAGE_DB_HOST}" -P "${MAGE_DB_PORT}" -u "${MAGE_DB_USER}" -p"${MAGE_DB_PASS}" "${MAGE_DB_NAME}" < 'magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql'` # Heroku, Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
     echo -e "${RED} MYSQL_IMPORT=${MYSQL_IMPORT} ${RESETCOLOR}"
 fi
 
@@ -315,10 +314,11 @@ du -hsx magento/vendor/* | sort -rh | head -10
 
 echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
-if [ -d magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media ]; then
-    echo -e "${ONYELLOW} haifeng-ben-zhang/magento1.9.2.4-sample-data ${RESETCOLOR}"
-    cp -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media/* magento/media/
-    cp -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin/* magento/skin/
+if [ -d magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media ]; then
+    echo -e "${ONYELLOW} mozgbrasil/magento-sample-data-1.9.2.4 ${RESETCOLOR}"
+    echo -e "${ONYELLOW} FIX: Heroku, Compiled slug size: 823M is too large (max is 500M). ${RESETCOLOR}"
+    #mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
+    #mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
 fi
 
 if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
@@ -331,10 +331,6 @@ if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     cp -fr magento/vendor/prasathmani/tinyfilemanager/ .
 fi
 
-echo -e "${ONYELLOW} FIX: Heroku, Compiled slug size: xM is too large (max is 500M). ${RESETCOLOR}"
-
-rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/media
-rm -fr magento/vendor/haifeng-ben-zhang/magento1.9.2.4-sample-data/skin
 
 du -hsx ./magento/media/* | sort -rh | head -10
 rm -fr ./magento/media/downloadable

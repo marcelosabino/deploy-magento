@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65c751cf6790bf113c0560be38bd901b",
+    "content-hash": "a676ef4b1a444e09e8ffade0e3130c6c",
     "packages": [
         {
             "name": "aydin-hassan/magento-core-composer-installer",
@@ -3360,6 +3360,16 @@
                 "redecard"
             ],
             "time": "2019-03-05T19:25:57+00:00"
+        },
+        {
+            "name": "mozgbrasil/magento-sample-data-1.9.2.4",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-sample-data-1.9.2.4.git",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "mozgbrasil/magento-squidfacil-php_72",
