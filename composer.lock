@@ -4,104 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "961e7d61e6932aed3173ec62b42fdd17",
+    "content-hash": "65c751cf6790bf113c0560be38bd901b",
     "packages": [
-        {
-            "name": "aoepeople/aoe_scheduler",
-            "version": "v1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AOEpeople/Aoe_Scheduler.git",
-                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AOEpeople/Aoe_Scheduler/zipball/9510692d6155feb3345e32151e5cd6492f162ce5",
-                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "*",
-                "php": ">=5.3"
-            },
-            "replace": {
-                "fbrnc/aoe_scheduler": "*"
-            },
-            "type": "magento-module",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Fabrizio Branca",
-                    "email": "firstname.lastname@aoe.com",
-                    "role": "Author/Maintainer"
-                },
-                {
-                    "name": "Lee Saferite",
-                    "email": "lee.saferite@aoe.com",
-                    "role": "Contributor/Maintainer"
-                }
-            ],
-            "description": "Magento Cron Scheduler",
-            "homepage": "https://github.com/AOEpeople/Aoe_Scheduler",
-            "support": {
-                "source": "https://github.com/AOEpeople/Aoe_Scheduler/tree/v1.5.1",
-                "issues": "https://github.com/AOEpeople/Aoe_Scheduler/issues"
-            },
-            "time": "2016-12-14T14:42:05+00:00"
-        },
-        {
-            "name": "aschroder/smtp_pro",
-            "version": "2.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension.git",
-                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aschroder/Magento-SMTP-Pro-Email-Extension/zipball/5101ed278d4aba05279fc1e53c3811983be8adda",
-                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "*"
-            },
-            "type": "magento-module",
-            "extra": {
-                "map": [
-                    [
-                        "app/etc/modules/Aschroder_SMTPPro.xml",
-                        "app/etc/modules/Aschroder_SMTPPro.xml"
-                    ],
-                    [
-                        "app/code/local/Aschroder/SMTPPro",
-                        "app/code/local/Aschroder/SMTPPro"
-                    ],
-                    [
-                        "app/design/adminhtml/base/default/template/smtppro",
-                        "app/design/adminhtml/default/default/template/smtppro"
-                    ],
-                    [
-                        "app/locale/en_US/Aschroder_SMTPPro.csv",
-                        "app/locale/en_US/Aschroder_SMTPPro.csv"
-                    ]
-                ]
-            },
-            "authors": [
-                {
-                    "name": "aschroder"
-                }
-            ],
-            "description": "sending Magento mail through an external smtp-server",
-            "homepage": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension",
-            "support": {
-                "source": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/tree/2.0.7",
-                "issues": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/issues"
-            },
-            "time": "2015-10-30T09:33:29+00:00"
-        },
         {
             "name": "aydin-hassan/magento-core-composer-installer",
             "version": "1.5.0",
@@ -983,16 +887,6 @@
                 "url"
             ],
             "time": "2018-12-04T20:46:45+00:00"
-        },
-        {
-            "name": "haifeng-ben-zhang/magento1.9.2.4-sample-data",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/haifeng-ben-zhang/magento1.9.2.4-sample-data.git",
-                "reference": "master"
-            },
-            "type": "library"
         },
         {
             "name": "hoa/compiler",
@@ -4649,55 +4543,6 @@
                 "shim"
             ],
             "time": "2018-09-21T13:07:52+00:00"
-        },
-        {
-            "name": "symfony/process",
-            "version": "v3.4.23",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "009f8dda80930e89e8344a4e310b08f9ff07dd2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/009f8dda80930e89e8344a4e310b08f9ff07dd2e",
-                "reference": "009f8dda80930e89e8344a4e310b08f9ff07dd2e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Process\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Process Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-16T13:27:11+00:00"
         },
         {
             "name": "symfony/var-dumper",

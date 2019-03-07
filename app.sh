@@ -23,15 +23,14 @@ FOLDER_CACHE=$BASE_PATH_USER'/dados/softwares'
 echo $SHELL
 echo
 echo $TERM
-if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
+BOLD=''
+NORMAL=''
+[ -z ${TERM} ] || {
   #BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
   #NORMAL=`tput sgr0`
   BOLD=$(tput bold)
   NORMAL=$(tput sgr0)
-else
-  BOLD=''
-  NORMAL=''
-fi
+}
 
 # Reset
 RESETCOLOR='\e[0m'       # Text Reset
