@@ -86,15 +86,15 @@ echo $(date +%Y-%m-%d_%H-%M-%S)
 
 echo -e "${ONYELLOW} pwd ${RESETCOLOR}"
 
-pwd && ls
+pwd
 
 #df -h
 
-du -hsx ./* | sort -rh | head -10
+#du -hsx ./* | sort -rh | head -10
 
-echo -e "${ONYELLOW} whoami - print effective userid ${RESETCOLOR}"
+#echo -e "${ONYELLOW} whoami - print effective userid ${RESETCOLOR}"
 
-whoami
+#whoami
 
 ##echo -e "${ONYELLOW} printenv - print all or part of environment ${RESETCOLOR}"
 
@@ -192,13 +192,13 @@ echo -e "${ONYELLOW} magento_install () { ${RESETCOLOR}"
 
 echo -e "${ONYELLOW} pwd ${RESETCOLOR}"
 
-pwd && ls
+pwd
 
 echo -e "${ONYELLOW} path ${RESETCOLOR}"
 
-pwd && ls
+pwd
 cd magento
-pwd && ls
+pwd
 
 #echo -e "${ONYELLOW} Aplicando permissões ${RESETCOLOR}"
 
@@ -277,9 +277,9 @@ bash ./mage list-upgrades
 
 echo -e "${ONYELLOW} path ${RESETCOLOR}"
 
-pwd && ls
+pwd
 cd ..
-pwd && ls
+pwd
 
 echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
@@ -305,7 +305,7 @@ echo -e "${ONYELLOW} post_update_cmd () { ${RESETCOLOR}"
 
 echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
-pwd && ls
+pwd
 
 echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
@@ -317,30 +317,19 @@ echo -e "${ONYELLOW} - ${RESETCOLOR}"
 if [ -d magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media ]; then
     echo -e "${ONYELLOW} mozgbrasil/magento-sample-data-1.9.2.4 ${RESETCOLOR}"
     echo -e "${ONYELLOW} FIX: Heroku, Compiled slug size: 823M is too large (max is 500M). ${RESETCOLOR}"
-    mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
-    mv -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
+    cp -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
+    cp -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
 fi
 
 if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
     echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${RESETCOLOR}"
-    mv -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
+    cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
 if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${RESETCOLOR}"
-    mv -fr magento/vendor/prasathmani/tinyfilemanager/ .
+    cp -fr magento/vendor/prasathmani/tinyfilemanager/ .
 fi
-
-du -hsx ./magento/media/* | sort -rh | head -10
-rm -fr ./magento/media/downloadable
-du -hsx ./magento/media/catalog/product/* | sort -rh | head -10
-rm -fr ./magento/media/catalog/product/p
-rm -fr ./magento/media/catalog/product/cache
-
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
-
-du -hsx ./* | sort -rh | head -10
-du -hsx magento/vendor/* | sort -rh | head -10
 
 echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
@@ -380,13 +369,12 @@ profile () { # Heroku, During startup, the container starts a bash shell that ru
 function_before
 echo -e "${ONYELLOW} profile () { ${RESETCOLOR}"
 
-pwd && ls
-
+pwd
 echo -e "${ONYELLOW} check mysql ${RESETCOLOR}"
 
 if type mysql >/dev/null 2>&1; then
 
-  echo "mysql installed"
+  echo -e "${ONGREEN} mysql installed ${RESETCOLOR}"
 
   if [ -f ".env" ] ; then # if file exits, only local
     if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
@@ -402,7 +390,7 @@ if type mysql >/dev/null 2>&1; then
   fi
 
 else
-    echo "mysql not installed"
+  echo -e "${ONRED} mysql not installed ${RESETCOLOR}"
 fi
 
 function_after
