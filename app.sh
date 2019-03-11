@@ -17,7 +17,8 @@ MACH=`uname -m`
 WHOAMI=$(whoami &2>/dev/null)
 FOLDER_UP="$(cd ../; pwd)"
 BASE_PATH_USER=~
-FOLDER_CACHE=$BASE_PATH_USER'/dados/softwares'
+BASE_PATH=$(dirname "$0")
+CURRENT_DIRECTORY=$(pwd)
 
 # Define text styles
 echo $SHELL
@@ -106,7 +107,7 @@ pwd
 
 #echo -e "${ONYELLOW} will list all the commands you could run. ${RESETCOLOR}"
 
-#compgen -A function -abck
+#compgen -A function -abck | sort
 
 function_after
 
@@ -127,10 +128,10 @@ function_after
 
 }
 
-magento_config_xml () {
+release_host () {
 
 function_before
-echo -e "${ONYELLOW} magento_config_xml () { ${RESETCOLOR}"
+echo -e "${ONYELLOW} release_host () { ${RESETCOLOR}"
 
 echo -e "${ONYELLOW} Check local.xml ${RESETCOLOR}"
 
@@ -197,7 +198,7 @@ pwd
 echo -e "${ONYELLOW} path ${RESETCOLOR}"
 
 pwd
-cd magento
+cd $CURRENT_DIRECTORY/magento
 pwd
 
 #echo -e "${ONYELLOW} Aplicando permissões ${RESETCOLOR}"
@@ -278,10 +279,8 @@ bash ./mage list-upgrades
 echo -e "${ONYELLOW} path ${RESETCOLOR}"
 
 pwd
-cd ..
+cd $CURRENT_DIRECTORY
 pwd
-
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
 function_after
 
@@ -303,16 +302,16 @@ post_update_cmd () { # post-update-cmd: occurs after the update command has been
 function_before
 echo -e "${ONYELLOW} post_update_cmd () { ${RESETCOLOR}"
 
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
+echo -e "${ONYELLOW} path ${RESETCOLOR}"
 
 pwd
 
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
+echo -e "${ONYELLOW} du ${RESETCOLOR}"
 
 du -hsx ./* | sort -rh | head -10
 du -hsx magento/vendor/* | sort -rh | head -10
 
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
+echo -e "${ONYELLOW} cp ${RESETCOLOR}"
 
 if [ -d magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media ]; then
     echo -e "${ONYELLOW} mozgbrasil/magento-sample-data-1.9.2.4 ${RESETCOLOR}"
@@ -326,17 +325,22 @@ if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
     cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
 fi
 
+mkdir backdoor
+
 if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${RESETCOLOR}"
-    cp -fr magento/vendor/prasathmani/tinyfilemanager/ .
+    cp -fr magento/vendor/prasathmani/tinyfilemanager/ backdoor
 fi
 
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
+if [ -d magento/vendor/maycowa/commando ]; then
+    echo -e "${ONYELLOW} maycowa/commando ${RESETCOLOR}"
+    cp -fr magento/vendor/maycowa/commando/ backdoor
+fi
+
+echo -e "${ONYELLOW} ... ${RESETCOLOR}"
 
 show_vars
 profile
-
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
 function_after
 
@@ -383,14 +387,16 @@ if type mysql >/dev/null 2>&1; then
     fi
   fi
 
-  if [ ! -f ".env" ] ; then # if file not exits, only heroku ...
-    if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
-      magento_config_xml
-    fi
-  fi
-
 else
   echo -e "${ONRED} mysql not installed ${RESETCOLOR}"
+fi
+
+echo -e "${ONYELLOW} release_host ${RESETCOLOR}"
+
+if [ ! -f ".env" ] ; then # if file not exits, only heroku ...
+  if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
+    release_host
+  fi
 fi
 
 function_after

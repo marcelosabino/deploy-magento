@@ -65,6 +65,18 @@
         {
             "type": "package",
             "package": {
+                "name": "maycowa/commando",
+                "version": "1.0.0",
+                "source":{
+                    "url":"https://github.com/maycowa/commando.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "ceckoslab/ceckoslab_quicklogin",
                 "version": "1.0.0",
                 "source":{
@@ -82,6 +94,7 @@
         "firegento/magento": "~1.9.4.0",
         "mozgbrasil/magento-sample-data-1.9.2.4": "1.0.*",
         "prasathmani/tinyfilemanager": "1.0.*",
+        "maycowa/commando": "1.0.*",
         "ceckoslab/ceckoslab_quicklogin": "1.0.*",
         "mozgbrasil/magento-bundle-php_72": "dev-master"
     },
