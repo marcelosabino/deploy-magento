@@ -5,7 +5,7 @@
 
 #
 
-echo '#@@# Running: profile'
+echo '#@@# Running: .profile'
 
 bash app.sh profile
 

@@ -19,6 +19,8 @@ FOLDER_UP="$(cd ../; pwd)"
 BASE_PATH_USER=~
 BASE_PATH=$(dirname "$0")
 CURRENT_DIRECTORY=$(pwd)
+BASE_DIR="$( cd -P "$( dirname "$0" )" && pwd )"
+echo $BASE_DIR
 
 # Define text styles
 echo $SHELL
@@ -329,12 +331,12 @@ mkdir backdoor
 
 if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${RESETCOLOR}"
-    cp -fr magento/vendor/prasathmani/tinyfilemanager/ backdoor
+    cp -fr magento/vendor/prasathmani/tinyfilemanager backdoor
 fi
 
 if [ -d magento/vendor/maycowa/commando ]; then
     echo -e "${ONYELLOW} maycowa/commando ${RESETCOLOR}"
-    cp -fr magento/vendor/maycowa/commando/ backdoor
+    cp -fr magento/vendor/maycowa/commando backdoor
 fi
 
 echo -e "${ONYELLOW} ... ${RESETCOLOR}"
@@ -391,7 +393,7 @@ else
   echo -e "${ONRED} mysql not installed ${RESETCOLOR}"
 fi
 
-echo -e "${ONYELLOW} release_host ${RESETCOLOR}"
+echo -e "${ONYELLOW} - ${RESETCOLOR}"
 
 if [ ! -f ".env" ] ; then # if file not exits, only heroku ...
   if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
