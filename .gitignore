@@ -3,7 +3,7 @@ magento
 vendor
 backdoor
 *.dev.md
-.env
+.env*
 auth.json
 addon-manifest.json
 n98-magerun.phar
