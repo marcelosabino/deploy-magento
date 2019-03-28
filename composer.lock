@@ -4,8 +4,104 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b873d8d911fdbcaecaa8541b02220e4",
+    "content-hash": "35bf806e8f6217dfedbf7116ee920f42",
     "packages": [
+        {
+            "name": "aoepeople/aoe_scheduler",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AOEpeople/Aoe_Scheduler.git",
+                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AOEpeople/Aoe_Scheduler/zipball/9510692d6155feb3345e32151e5cd6492f162ce5",
+                "reference": "9510692d6155feb3345e32151e5cd6492f162ce5",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*",
+                "php": ">=5.3"
+            },
+            "replace": {
+                "fbrnc/aoe_scheduler": "*"
+            },
+            "type": "magento-module",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabrizio Branca",
+                    "email": "firstname.lastname@aoe.com",
+                    "role": "Author/Maintainer"
+                },
+                {
+                    "name": "Lee Saferite",
+                    "email": "lee.saferite@aoe.com",
+                    "role": "Contributor/Maintainer"
+                }
+            ],
+            "description": "Magento Cron Scheduler",
+            "homepage": "https://github.com/AOEpeople/Aoe_Scheduler",
+            "support": {
+                "source": "https://github.com/AOEpeople/Aoe_Scheduler/tree/v1.5.1",
+                "issues": "https://github.com/AOEpeople/Aoe_Scheduler/issues"
+            },
+            "time": "2016-12-14T14:42:05+00:00"
+        },
+        {
+            "name": "aschroder/smtp_pro",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension.git",
+                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aschroder/Magento-SMTP-Pro-Email-Extension/zipball/5101ed278d4aba05279fc1e53c3811983be8adda",
+                "reference": "5101ed278d4aba05279fc1e53c3811983be8adda",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "extra": {
+                "map": [
+                    [
+                        "app/etc/modules/Aschroder_SMTPPro.xml",
+                        "app/etc/modules/Aschroder_SMTPPro.xml"
+                    ],
+                    [
+                        "app/code/local/Aschroder/SMTPPro",
+                        "app/code/local/Aschroder/SMTPPro"
+                    ],
+                    [
+                        "app/design/adminhtml/base/default/template/smtppro",
+                        "app/design/adminhtml/default/default/template/smtppro"
+                    ],
+                    [
+                        "app/locale/en_US/Aschroder_SMTPPro.csv",
+                        "app/locale/en_US/Aschroder_SMTPPro.csv"
+                    ]
+                ]
+            },
+            "authors": [
+                {
+                    "name": "aschroder"
+                }
+            ],
+            "description": "sending Magento mail through an external smtp-server",
+            "homepage": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension",
+            "support": {
+                "source": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/tree/2.0.7",
+                "issues": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/issues"
+            },
+            "time": "2015-10-30T09:33:29+00:00"
+        },
         {
             "name": "aydin-hassan/magento-core-composer-installer",
             "version": "1.5.0",
@@ -53,6 +149,573 @@
             "time": "2017-08-27T12:18:04+00:00"
         },
         {
+            "name": "ceckoslab/ceckoslab_quicklogin",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ceckoslab/CeckosLab_QuickLogin.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "eloquent/composer-config-reader",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eloquent/composer-config-reader.git",
+                "reference": "ee83a1cad8f68508f05b30c376003045a7cdfcd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eloquent/composer-config-reader/zipball/ee83a1cad8f68508f05b30c376003045a7cdfcd8",
+                "reference": "ee83a1cad8f68508f05b30c376003045a7cdfcd8",
+                "shasum": ""
+            },
+            "require": {
+                "eloquent/enumeration": "^5",
+                "justinrainbow/json-schema": "^4",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "eloquent/liberator": "^2",
+                "eloquent/phony": "0.14.4",
+                "phpunit/phpunit": "^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eloquent\\Composer\\Configuration\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Millard",
+                    "email": "ezzatron@gmail.com",
+                    "homepage": "http://ezzatron.com/"
+                }
+            ],
+            "description": "A light-weight component for reading Composer configuration files.",
+            "homepage": "https://github.com/eloquent/composer-config-reader",
+            "keywords": [
+                "composer",
+                "configuration",
+                "parser",
+                "reader"
+            ],
+            "time": "2017-11-02T01:07:08+00:00"
+        },
+        {
+            "name": "eloquent/enumeration",
+            "version": "5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eloquent/enumeration.git",
+                "reference": "0242859435d9b135939816858348556d3cde9e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eloquent/enumeration/zipball/0242859435d9b135939816858348556d3cde9e3c",
+                "reference": "0242859435d9b135939816858348556d3cde9e3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "icecave/archer": "dev-develop",
+                "phpunit/phpunit": "^4",
+                "sami/sami": "^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eloquent\\Enumeration\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erin Millard",
+                    "email": "ezzatron@gmail.com",
+                    "homepage": "http://ezzatron.com/"
+                }
+            ],
+            "description": "An enumeration implementation for PHP.",
+            "homepage": "https://github.com/eloquent/enumeration",
+            "keywords": [
+                "class",
+                "enum",
+                "enumeration",
+                "multiton",
+                "set",
+                "type"
+            ],
+            "time": "2015-11-03T22:21:38+00:00"
+        },
+        {
+            "name": "firegento/magento",
+            "version": "v1.9.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firegento/magento.git",
+                "reference": "509d3cb1a483ecb212aa55af2478dfb536665be7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firegento/magento/zipball/509d3cb1a483ecb212aa55af2478dfb536665be7",
+                "reference": "509d3cb1a483ecb212aa55af2478dfb536665be7",
+                "shasum": ""
+            },
+            "type": "magento-core",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Magento CE",
+            "support": {
+                "source": "https://github.com/firegento/magento/tree/v1.9.4.0",
+                "issues": "https://github.com/firegento/magento/issues"
+            },
+            "time": "2018-11-29T08:26:58+00:00"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
+                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpdocumentor/phpdocumentor": "~2",
+                "phpunit/phpunit": "^4.8.22"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2016-12-22T16:43:46+00:00"
+        },
+        {
+            "name": "magento-hackathon/magento-composer-installer",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cotya/magento-composer-installer.git",
+                "reference": "fad9b319b425c14d9173732100c829bb310eb050"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cotya/magento-composer-installer/zipball/fad9b319b425c14d9173732100c829bb310eb050",
+                "reference": "fad9b319b425c14d9173732100c829bb310eb050",
+                "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "vendor",
+                    "/tests/FullStackTest/"
+                ]
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "eloquent/composer-config-reader": "2.*",
+                "php": ">=5.5",
+                "symfony/console": "^2.5|^3.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "cotya/composer-test-framework": "dev-master",
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "~2.3",
+                "squizlabs/php_codesniffer": "~2.1",
+                "symfony/process": "~2.5"
+            },
+            "suggest": {
+                "colinmollenhour/modman": "*",
+                "theseer/autoload": "~1.14"
+            },
+            "bin": [
+                "bin/magento-composer-installer.php"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "class": "MagentoHackathon\\Composer\\Magento\\Plugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "MagentoHackathon\\Composer": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-0": {
+                    "MagentoHackathon\\Composer\\Magento": "tests/"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Fahlke aka Flyingmana",
+                    "email": "flyingmana@googlemail.com"
+                },
+                {
+                    "name": "Jörg Weller",
+                    "email": "weller@flagbit.de"
+                },
+                {
+                    "name": "Karl Spies",
+                    "email": "karl.spies@gmx.net"
+                },
+                {
+                    "name": "Tobias Vogt",
+                    "email": "tobi@webguys.de"
+                },
+                {
+                    "name": "David Fuhr",
+                    "email": "fuhr@flagbit.de"
+                },
+                {
+                    "name": "Vinai Kopp",
+                    "email": "vinai@netzarbeiter.com"
+                }
+            ],
+            "description": "Composer installer for Magento modules",
+            "homepage": "https://github.com/magento-hackathon/magento-composer-installer",
+            "keywords": [
+                "composer-installer",
+                "magento"
+            ],
+            "support": {
+                "source": "https://github.com/Cotya/magento-composer-installer/tree/master",
+                "issues": "https://github.com/Cotya/magento-composer-installer/issues"
+            },
+            "time": "2018-12-05T23:01:45+00:00"
+        },
+        {
+            "name": "maycowa/commando",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maycowa/commando.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "mozgbrasil/magento-sample-data-1.9.2.4",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mozgbrasil/magento-sample-data-1.9.2.4.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "prasathmani/tinyfilemanager",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/prasathmani/tinyfilemanager.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-20T15:27:04+00:00"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v3.4.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "71ce77f37af0c5ffb9590e43cc4f70e426945c5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/71ce77f37af0c5ffb9590e43cc4f70e426945c5e",
+                "reference": "71ce77f37af0c5ffb9590e43cc4f70e426945c5e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/debug": "~2.8|~3.0|~4.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~3.3|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.3|~4.0"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/lock": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-02-23T15:06:07+00:00"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "v4.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/de73f48977b8eaf7ce22814d66e43a1662cc864f",
+                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "psr/log": "~1.0"
+            },
+            "conflict": {
+                "symfony/http-kernel": "<3.4"
+            },
+            "require-dev": {
+                "symfony/http-kernel": "~3.4|~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Debug\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Debug Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-03-03T18:11:24+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
             "name": "byjg/omnipay-komerci",
             "version": "1.0.2",
             "source": {
@@ -91,16 +754,6 @@
             ],
             "description": "Komerci is brazilian acquirer solution provided by Rede (former RedeCard) that accept payments with MasterCard, Visa and Diners Club International credit cards on the Internet",
             "time": "2017-05-05T13:16:41+00:00"
-        },
-        {
-            "name": "ceckoslab/ceckoslab_quicklogin",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ceckoslab/CeckosLab_QuickLogin.git",
-                "reference": "master"
-            },
-            "type": "library"
         },
         {
             "name": "container-interop/container-interop",
@@ -480,134 +1133,6 @@
                 "shipping"
             ],
             "time": "2018-11-20T22:29:22+00:00"
-        },
-        {
-            "name": "eloquent/composer-config-reader",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eloquent/composer-config-reader.git",
-                "reference": "ee83a1cad8f68508f05b30c376003045a7cdfcd8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/composer-config-reader/zipball/ee83a1cad8f68508f05b30c376003045a7cdfcd8",
-                "reference": "ee83a1cad8f68508f05b30c376003045a7cdfcd8",
-                "shasum": ""
-            },
-            "require": {
-                "eloquent/enumeration": "^5",
-                "justinrainbow/json-schema": "^4",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "eloquent/liberator": "^2",
-                "eloquent/phony": "0.14.4",
-                "phpunit/phpunit": "^4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Eloquent\\Composer\\Configuration\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Erin Millard",
-                    "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
-                }
-            ],
-            "description": "A light-weight component for reading Composer configuration files.",
-            "homepage": "https://github.com/eloquent/composer-config-reader",
-            "keywords": [
-                "composer",
-                "configuration",
-                "parser",
-                "reader"
-            ],
-            "time": "2017-11-02T01:07:08+00:00"
-        },
-        {
-            "name": "eloquent/enumeration",
-            "version": "5.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eloquent/enumeration.git",
-                "reference": "0242859435d9b135939816858348556d3cde9e3c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/enumeration/zipball/0242859435d9b135939816858348556d3cde9e3c",
-                "reference": "0242859435d9b135939816858348556d3cde9e3c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "icecave/archer": "dev-develop",
-                "phpunit/phpunit": "^4",
-                "sami/sami": "^3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Eloquent\\Enumeration\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Erin Millard",
-                    "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
-                }
-            ],
-            "description": "An enumeration implementation for PHP.",
-            "homepage": "https://github.com/eloquent/enumeration",
-            "keywords": [
-                "class",
-                "enum",
-                "enumeration",
-                "multiton",
-                "set",
-                "type"
-            ],
-            "time": "2015-11-03T22:21:38+00:00"
-        },
-        {
-            "name": "firegento/magento",
-            "version": "v1.9.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firegento/magento.git",
-                "reference": "509d3cb1a483ecb212aa55af2478dfb536665be7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firegento/magento/zipball/509d3cb1a483ecb212aa55af2478dfb536665be7",
-                "reference": "509d3cb1a483ecb212aa55af2478dfb536665be7",
-                "shasum": ""
-            },
-            "type": "magento-core",
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Magento CE",
-            "support": {
-                "source": "https://github.com/firegento/magento/tree/v1.9.4.0",
-                "issues": "https://github.com/firegento/magento/issues"
-            },
-            "time": "2018-11-29T08:26:58+00:00"
         },
         {
             "name": "guzzle/guzzle",
@@ -1931,72 +2456,6 @@
             "time": "2019-02-27T20:38:28+00:00"
         },
         {
-            "name": "justinrainbow/json-schema",
-            "version": "4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
-                "reference": "d39c56a46b3ebe1f3696479966cd2b9f50aaa24f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "json-schema/json-schema-test-suite": "1.2.0",
-                "phpdocumentor/phpdocumentor": "~2",
-                "phpunit/phpunit": "^4.8.22"
-            },
-            "bin": [
-                "bin/validate-json"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JsonSchema\\": "src/JsonSchema/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Prieto Reis",
-                    "email": "bruno.p.reis@gmail.com"
-                },
-                {
-                    "name": "Justin Rainbow",
-                    "email": "justin.rainbow@gmail.com"
-                },
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
-                    "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com"
-                }
-            ],
-            "description": "A library to validate a json schema.",
-            "homepage": "https://github.com/justinrainbow/json-schema",
-            "keywords": [
-                "json",
-                "schema"
-            ],
-            "time": "2016-12-22T16:43:46+00:00"
-        },
-        {
             "name": "league/csv",
             "version": "8.2.2",
             "source": {
@@ -2052,113 +2511,6 @@
                 "write"
             ],
             "time": "2017-07-12T07:18:20+00:00"
-        },
-        {
-            "name": "magento-hackathon/magento-composer-installer",
-            "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Cotya/magento-composer-installer.git",
-                "reference": "fad9b319b425c14d9173732100c829bb310eb050"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Cotya/magento-composer-installer/zipball/fad9b319b425c14d9173732100c829bb310eb050",
-                "reference": "fad9b319b425c14d9173732100c829bb310eb050",
-                "shasum": ""
-            },
-            "archive": {
-                "exclude": [
-                    "vendor",
-                    "/tests/FullStackTest/"
-                ]
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "eloquent/composer-config-reader": "2.*",
-                "php": ">=5.5",
-                "symfony/console": "^2.5|^3.0"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*",
-                "cotya/composer-test-framework": "dev-master",
-                "mikey179/vfsstream": "~1.4",
-                "phpunit/phpunit": "~4.3",
-                "phpunit/phpunit-mock-objects": "~2.3",
-                "squizlabs/php_codesniffer": "~2.1",
-                "symfony/process": "~2.5"
-            },
-            "suggest": {
-                "colinmollenhour/modman": "*",
-                "theseer/autoload": "~1.14"
-            },
-            "bin": [
-                "bin/magento-composer-installer.php"
-            ],
-            "type": "composer-plugin",
-            "extra": {
-                "class": "MagentoHackathon\\Composer\\Magento\\Plugin"
-            },
-            "autoload": {
-                "psr-0": {
-                    "MagentoHackathon\\Composer": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-0": {
-                    "MagentoHackathon\\Composer\\Magento": "tests/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Fahlke aka Flyingmana",
-                    "email": "flyingmana@googlemail.com"
-                },
-                {
-                    "name": "Jörg Weller",
-                    "email": "weller@flagbit.de"
-                },
-                {
-                    "name": "Karl Spies",
-                    "email": "karl.spies@gmx.net"
-                },
-                {
-                    "name": "Tobias Vogt",
-                    "email": "tobi@webguys.de"
-                },
-                {
-                    "name": "David Fuhr",
-                    "email": "fuhr@flagbit.de"
-                },
-                {
-                    "name": "Vinai Kopp",
-                    "email": "vinai@netzarbeiter.com"
-                }
-            ],
-            "description": "Composer installer for Magento modules",
-            "homepage": "https://github.com/magento-hackathon/magento-composer-installer",
-            "keywords": [
-                "composer-installer",
-                "magento"
-            ],
-            "support": {
-                "source": "https://github.com/Cotya/magento-composer-installer/tree/master",
-                "issues": "https://github.com/Cotya/magento-composer-installer/issues"
-            },
-            "time": "2018-12-05T23:01:45+00:00"
-        },
-        {
-            "name": "maycowa/commando",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/maycowa/commando.git",
-                "reference": "master"
-            },
-            "type": "library"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -2295,24 +2647,17 @@
             "time": "2019-02-07T18:01:35+00:00"
         },
         {
-            "name": "mozgbrasil/magento-bancodobrasil-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bancodobrasil-php_72.git",
-                "reference": "342e3c8125086d3967e60729e22dca05dd8026bf"
-            },
+            "name": "mozgbrasil/magento-bancodobrasil-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bancodobrasil-php_72/zipball/342e3c8125086d3967e60729e22dca05dd8026bf",
-                "reference": "342e3c8125086d3967e60729e22dca05dd8026bf",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-bancodobrasil",
+                "reference": "3469b084441ba2d7254b0930765327c995aca8f9"
             },
             "require": {
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2327,32 +2672,38 @@
             "description": "Integração ao bancodobrasil",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "bancodobrasil",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-bancodobrasil-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-bancodobrasil-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-bancodobrasil-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-base-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-base-php_72.git",
-                "reference": "669cd29c0e5419ef755a5c31fdf6e15f7471bd4f"
-            },
+            "name": "mozgbrasil/magento-base-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-base-php_72/zipball/669cd29c0e5419ef755a5c31fdf6e15f7471bd4f",
-                "reference": "669cd29c0e5419ef755a5c31fdf6e15f7471bd4f",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-base",
+                "reference": "31cab962afedb465f3c0edf5362cd9620d44ddd7"
             },
             "require": {
                 "magento-hackathon/magento-composer-installer": "~3.0",
-                "mozgbrasil/php-framework-php_72": "dev-master"
+                "mozgbrasil/php-framework-compile_sufix": "@dev"
             },
             "suggest": {
                 "aoepeople/aoe_scheduler": "Magento Cron Scheduler",
@@ -2363,7 +2714,6 @@
                 "magento-hackathon/hackathon_magemonitoring": "Magento Monitoring Module to get information about the current installation (Server,Cache,PHP,Rewrites,Logs,...)"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2378,36 +2728,41 @@
             "description": "Módulo base para Magento",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Bridge",
                 "api",
+                "bridge",
                 "cerebrum",
                 "email",
                 "magento",
                 "mozg"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-base-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-base-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-base-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-boxpacker-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-boxpacker-php_72.git",
-                "reference": "2e4c27fbf5d14b347a3b566a5fa0abddf8165726"
-            },
+            "name": "mozgbrasil/magento-boxpacker-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-boxpacker-php_72/zipball/2e4c27fbf5d14b347a3b566a5fa0abddf8165726",
-                "reference": "2e4c27fbf5d14b347a3b566a5fa0abddf8165726",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-boxpacker",
+                "reference": "af19f116bf63d440e052e6318891a94e0a1ccfe9"
             },
             "require": {
                 "dvdoug/boxpacker": "*",
-                "mozgbrasil/magento-base-php_72": "dev-master",
-                "mozgbrasil/magento-product-page-shipping-php_72": "dev-master"
+                "mozgbrasil/magento-base-compile_sufix": "@dev",
+                "mozgbrasil/magento-product-page-shipping-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2430,27 +2785,32 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-boxpacker-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-boxpacker-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-boxpacker-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-bradesco-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bradesco-php_72.git",
-                "reference": "2e176e97247892d8b56e639d5429f0095b614ddc"
-            },
+            "name": "mozgbrasil/magento-bradesco-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bradesco-php_72/zipball/2e176e97247892d8b56e639d5429f0095b614ddc",
-                "reference": "2e176e97247892d8b56e639d5429f0095b614ddc",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-bradesco",
+                "reference": "b3be7df0b8cb2ae5e665004f9260ca3de70cf171"
             },
             "require": {
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2465,14 +2825,26 @@
             "description": "Integração ao bradesco",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "bradesco",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-bradesco-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-bradesco-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-bradesco-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "mozgbrasil/magento-brasil-regions",
@@ -2515,24 +2887,17 @@
             "time": "2016-05-17T19:09:26+00:00"
         },
         {
-            "name": "mozgbrasil/magento-braspag-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-braspag-php_72.git",
-                "reference": "892dabf408bd76e1754e1d6ce3d53707268d5632"
-            },
+            "name": "mozgbrasil/magento-braspag-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-braspag-php_72/zipball/892dabf408bd76e1754e1d6ce3d53707268d5632",
-                "reference": "892dabf408bd76e1754e1d6ce3d53707268d5632",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-braspag",
+                "reference": "79b40c3c506f6b0caf0c57cfe70a60f6f4a8769b"
             },
             "require": {
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2547,92 +2912,39 @@
             "description": "Integração ao braspag",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "braspag",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-braspag-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-braspag-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-braspag-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-bundle-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-bundle-php_72.git",
-                "reference": "c7b147c13ff27cfccabb488bae4a82daf8335d10"
-            },
+            "name": "mozgbrasil/magento-checkout-filters-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-bundle-php_72/zipball/c7b147c13ff27cfccabb488bae4a82daf8335d10",
-                "reference": "c7b147c13ff27cfccabb488bae4a82daf8335d10",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-checkout-filters",
+                "reference": "beefeea83803097c887444b29d4b190cb1dc3ddd"
             },
             "require": {
-                "mozgbrasil/magento-bancodobrasil-php_72": "dev-master",
-                "mozgbrasil/magento-bradesco-php_72": "dev-master",
-                "mozgbrasil/magento-brasil-regions": "dev-master",
-                "mozgbrasil/magento-braspag-php_72": "dev-master",
-                "mozgbrasil/magento-checkout-filters-php_72": "dev-master",
-                "mozgbrasil/magento-cielo-php_72": "dev-master",
-                "mozgbrasil/magento-clearsale-php_72": "dev-master",
-                "mozgbrasil/magento-correios-php_72": "dev-master",
-                "mozgbrasil/magento-customer-php_72": "dev-master",
-                "mozgbrasil/magento-itau-php_72": "dev-master",
-                "mozgbrasil/magento-iwd-opc": "dev-master",
-                "mozgbrasil/magento-jadlog-php_72": "dev-master",
-                "mozgbrasil/magento-jamef-php_72": "dev-master",
-                "mozgbrasil/magento-locale-pt_br": "dev-master",
-                "mozgbrasil/magento-loggi-php_72": "dev-master",
-                "mozgbrasil/magento-pagseguro-php_72": "dev-master",
-                "mozgbrasil/magento-rede-php_72": "dev-master",
-                "mozgbrasil/magento-redecard-php_72": "dev-master",
-                "mozgbrasil/magento-squidfacil-php_72": "dev-master"
-            },
-            "type": "metapackage",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Marcio dos Santos Amorim",
-                    "email": "suporte@mozg.com.br",
-                    "homepage": "http://mozg.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Este é um meta pacote que instala todos os módulos da Mozg no Magento",
-            "homepage": "http://mozg.com.br",
-            "keywords": [
-                "cerebrum",
-                "magento",
-                "metapackage",
-                "mozg"
-            ],
-            "time": "2019-03-05T19:25:57+00:00"
-        },
-        {
-            "name": "mozgbrasil/magento-checkout-filters-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-checkout-filters-php_72.git",
-                "reference": "4fabe1ec5752b578aa77ee2e4b3c77e51bd2d921"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-checkout-filters-php_72/zipball/4fabe1ec5752b578aa77ee2e4b3c77e51bd2d921",
-                "reference": "4fabe1ec5752b578aa77ee2e4b3c77e51bd2d921",
-                "shasum": ""
-            },
-            "require": {
-                "mozgbrasil/magento-base-php_72": "dev-master"
+                "mozgbrasil/magento-base-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2653,27 +2965,32 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-checkout-filters-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-checkout-filters-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-checkout-filters-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-cielo-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-cielo-php_72.git",
-                "reference": "51ea8f98428fd480acf7206308fd6ee601fd160e"
-            },
+            "name": "mozgbrasil/magento-cielo-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-cielo-php_72/zipball/51ea8f98428fd480acf7206308fd6ee601fd160e",
-                "reference": "51ea8f98428fd480acf7206308fd6ee601fd160e",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-cielo",
+                "reference": "86861b3a4f6c395f8a2df3ae2c4735924f5874c2"
             },
             "require": {
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2688,34 +3005,39 @@
             "description": "Integração ao cielo",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "cerebrum",
                 "cielo",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-cielo-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-cielo-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-cielo-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-clearsale-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-clearsale-php_72.git",
-                "reference": "9274d0aa161545ef58f2e8080dd23c60299eca56"
-            },
+            "name": "mozgbrasil/magento-clearsale-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-clearsale-php_72/zipball/9274d0aa161545ef58f2e8080dd23c60299eca56",
-                "reference": "9274d0aa161545ef58f2e8080dd23c60299eca56",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-clearsale",
+                "reference": "bd16e2d27364209bf493b45c8dbe41996d60c14d"
             },
             "require": {
-                "mozgbrasil/magento-base-php_72": "dev-master"
+                "mozgbrasil/magento-base-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2730,33 +3052,38 @@
             "description": "Integração a Clearsale",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "ClearSale",
                 "anti-fraud",
                 "cerebrum",
+                "clearsale",
                 "magento",
                 "mozg"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-clearsale-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-clearsale-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-clearsale-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-correios-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-correios-php_72.git",
-                "reference": "2f81a1442b6b475afe20b73c77b673d2a4d08e19"
-            },
+            "name": "mozgbrasil/magento-correios-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-correios-php_72/zipball/2f81a1442b6b475afe20b73c77b673d2a4d08e19",
-                "reference": "2f81a1442b6b475afe20b73c77b673d2a4d08e19",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-correios",
+                "reference": "d6ba30f2c2afb88f4fb88e8d73eacf15465889a3"
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
+                "mozgbrasil/magento-boxpacker-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2780,28 +3107,33 @@
                 "sigep",
                 "transporte"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-correios-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-correios-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-correios-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-customer-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-customer-php_72.git",
-                "reference": "0d34fdda722ee864ba8e3f8e48710139097bbeff"
-            },
+            "name": "mozgbrasil/magento-customer-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-customer-php_72/zipball/0d34fdda722ee864ba8e3f8e48710139097bbeff",
-                "reference": "0d34fdda722ee864ba8e3f8e48710139097bbeff",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-customer",
+                "reference": "fd7d1bd9a9440d714fbc48b3bb4f55311d00ea67"
             },
             "require": {
-                "mozgbrasil/magento-base-php_72": "dev-master",
+                "mozgbrasil/magento-base-compile_sufix": "@dev",
                 "mozgbrasil/magento-brasil-regions": "*"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2823,24 +3155,29 @@
                 "magento",
                 "mozg"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-customer-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-customer-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-customer-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-fee-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-fee-php_72.git",
-                "reference": "3363bbe3214b7fb9d59a9cbbb900d7c5bbc9db6a"
-            },
+            "name": "mozgbrasil/magento-fee-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-fee-php_72/zipball/3363bbe3214b7fb9d59a9cbbb900d7c5bbc9db6a",
-                "reference": "3363bbe3214b7fb9d59a9cbbb900d7c5bbc9db6a",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-fee",
+                "reference": "e40bd59e966ca9e2cdac6ea0a14c0f0ff56b9e68"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2863,28 +3200,33 @@
                 "shipping",
                 "transporte"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-fee-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-fee-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-fee-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-itau-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-itau-php_72.git",
-                "reference": "727a269bf7362dd890f582772eaf7f10d72f0e47"
-            },
+            "name": "mozgbrasil/magento-itau-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-itau-php_72/zipball/727a269bf7362dd890f582772eaf7f10d72f0e47",
-                "reference": "727a269bf7362dd890f582772eaf7f10d72f0e47",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-itau",
+                "reference": "ac83fb6cf9d67451bdc6d09a09cd77872329156c"
             },
             "require": {
                 "dilneiss/itaubankline": "*",
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2899,14 +3241,27 @@
             "description": "Integração ao itau",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "cerebrum",
+                "itau",
                 "itaú",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-itau-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-itau-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-itau-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "mozgbrasil/magento-iwd-all",
@@ -2989,24 +3344,17 @@
             "time": "2017-01-27T10:29:01+00:00"
         },
         {
-            "name": "mozgbrasil/magento-jadlog-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jadlog-php_72.git",
-                "reference": "a40de116365a397f14c1363ef7093d385cdd8629"
-            },
+            "name": "mozgbrasil/magento-jadlog-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jadlog-php_72/zipball/a40de116365a397f14c1363ef7093d385cdd8629",
-                "reference": "a40de116365a397f14c1363ef7093d385cdd8629",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-jadlog",
+                "reference": "596a3a8958d873e39641fb988a20a20709cfb46b"
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
+                "mozgbrasil/magento-boxpacker-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3029,27 +3377,32 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-jadlog-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-jadlog-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-jadlog-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-jamef-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-jamef-php_72.git",
-                "reference": "0a35313edce84e33ba6d76f3e6a9e5a3a10590c0"
-            },
+            "name": "mozgbrasil/magento-jamef-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-jamef-php_72/zipball/0a35313edce84e33ba6d76f3e6a9e5a3a10590c0",
-                "reference": "0a35313edce84e33ba6d76f3e6a9e5a3a10590c0",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-jamef",
+                "reference": "c7b013220064b02e6d5ff909ad1af36edb024e5f"
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
+                "mozgbrasil/magento-boxpacker-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3072,27 +3425,32 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-jamef-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-jamef-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-jamef-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "mozgbrasil/magento-locale-pt_br",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-locale-pt_br.git",
-                "reference": "70c4fc8f5ed27596baf370e687b480a737008015"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-locale-pt_br/zipball/70c4fc8f5ed27596baf370e687b480a737008015",
-                "reference": "70c4fc8f5ed27596baf370e687b480a737008015",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-locale-pt_br",
+                "reference": "70c4fc8f5ed27596baf370e687b480a737008015"
             },
             "require": {
                 "magento-hackathon/magento-composer-installer": "*"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -3112,27 +3470,33 @@
                 "magento",
                 "mozg"
             ],
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-locale-pt_br/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-locale-pt_br",
+                "docs": "https://github.com/mozgbrasil/magento-locale-pt_br/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            },
             "time": "2018-04-12T16:06:40+00:00"
         },
         {
-            "name": "mozgbrasil/magento-loggi-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-loggi-php_72.git",
-                "reference": "3f5250df44f650f3a21e8b56febf6e29be8d50e9"
-            },
+            "name": "mozgbrasil/magento-loggi-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-loggi-php_72/zipball/3f5250df44f650f3a21e8b56febf6e29be8d50e9",
-                "reference": "3f5250df44f650f3a21e8b56febf6e29be8d50e9",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-loggi",
+                "reference": "af0433be4a2f777f3ac20def00d8a1dbe635fea7"
             },
             "require": {
-                "mozgbrasil/magento-boxpacker-php_72": "dev-master"
+                "mozgbrasil/magento-boxpacker-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3156,28 +3520,33 @@
                 "shipping",
                 "transportadora"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-loggi-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-loggi-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-loggi-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-pagseguro-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-pagseguro-php_72.git",
-                "reference": "7fed4aef9a93779a49756a7c81ba2deef9be691a"
-            },
+            "name": "mozgbrasil/magento-pagseguro-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-pagseguro-php_72/zipball/7fed4aef9a93779a49756a7c81ba2deef9be691a",
-                "reference": "7fed4aef9a93779a49756a7c81ba2deef9be691a",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-pagseguro",
+                "reference": "9da5e2f198d7041968bb3d17e84bcce8f4cc593a"
             },
             "require": {
-                "mozgbrasil/magento-payment-php_72": "dev-master",
+                "mozgbrasil/magento-payment-compile_sufix": "@dev",
                 "pagseguro/pagseguro-php-sdk": "*"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3192,35 +3561,40 @@
             "description": "Integração ao pagseguro",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
-                "Pagseguro",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
+                "pagseguro",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-pagseguro-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-pagseguro-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-pagseguro-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-payment-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-payment-php_72.git",
-                "reference": "b4bcb4b5f5f913cba3b0eb18c03e3f5c46fc44fa"
-            },
+            "name": "mozgbrasil/magento-payment-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-payment-php_72/zipball/b4bcb4b5f5f913cba3b0eb18c03e3f5c46fc44fa",
-                "reference": "b4bcb4b5f5f913cba3b0eb18c03e3f5c46fc44fa",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-payment",
+                "reference": "9ff93e939c428274c638ddded28bd59190246f55"
             },
             "require": {
-                "mozgbrasil/magento-base-php_72": "dev-master",
-                "mozgbrasil/magento-fee-php_72": "dev-master"
+                "mozgbrasil/magento-base-compile_sufix": "@dev",
+                "mozgbrasil/magento-fee-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3235,33 +3609,38 @@
             "description": "Integração ao payment",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-payment-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-payment-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-payment-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-product-page-shipping-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-product-page-shipping-php_72.git",
-                "reference": "b5c1b0b057b7f83716e685446ac8aeae56e7fe10"
-            },
+            "name": "mozgbrasil/magento-product-page-shipping-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-product-page-shipping-php_72/zipball/b5c1b0b057b7f83716e685446ac8aeae56e7fe10",
-                "reference": "b5c1b0b057b7f83716e685446ac8aeae56e7fe10",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-product-page-shipping",
+                "reference": "fe1479c220870ecf861426bc8b327491fe6fbe2e"
             },
             "require": {
-                "mozgbrasil/magento-base-php_72": "dev-master"
+                "mozgbrasil/magento-base-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3284,27 +3663,32 @@
                 "shipestimation",
                 "shipping"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-product-page-shipping-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-product-page-shipping-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-product-page-shipping-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-rede-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-rede-php_72.git",
-                "reference": "981c543e1ef7fb89584fadcdd8a92916eaa5d855"
-            },
+            "name": "mozgbrasil/magento-rede-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-rede-php_72/zipball/981c543e1ef7fb89584fadcdd8a92916eaa5d855",
-                "reference": "981c543e1ef7fb89584fadcdd8a92916eaa5d855",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-rede",
+                "reference": "5e69ee741d2091b230a7314ba04cfc0c29205a6f"
             },
             "require": {
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3319,35 +3703,40 @@
             "description": "Integração ao rede",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment",
                 "rede"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-rede-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-rede-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-rede-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-redecard-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-redecard-php_72.git",
-                "reference": "d2fc3ad39992b8b2a63ca5deb9bcb84107c7f3f8"
-            },
+            "name": "mozgbrasil/magento-redecard-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-redecard-php_72/zipball/d2fc3ad39992b8b2a63ca5deb9bcb84107c7f3f8",
-                "reference": "d2fc3ad39992b8b2a63ca5deb9bcb84107c7f3f8",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-redecard",
+                "reference": "c2a8448e9aa6413eca8d1851af188e28b25b433c"
             },
             "require": {
                 "byjg/omnipay-komerci": "*",
-                "mozgbrasil/magento-payment-php_72": "dev-master"
+                "mozgbrasil/magento-payment-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3362,44 +3751,39 @@
             "description": "Integração ao redecard",
             "homepage": "http://mozg.com.br",
             "keywords": [
-                "Pagamento",
                 "cerebrum",
                 "magento",
                 "mozg",
+                "pagamento",
                 "payment",
                 "redecard"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-redecard-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-redecard-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-redecard-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/magento-sample-data-1.9.2.4",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-sample-data-1.9.2.4.git",
-                "reference": "master"
-            },
-            "type": "library"
-        },
-        {
-            "name": "mozgbrasil/magento-squidfacil-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/magento-squidfacil-php_72.git",
-                "reference": "c8872660702303dfa19edf284fd8949c93a52f7a"
-            },
+            "name": "mozgbrasil/magento-squidfacil-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/magento-squidfacil-php_72/zipball/c8872660702303dfa19edf284fd8949c93a52f7a",
-                "reference": "c8872660702303dfa19edf284fd8949c93a52f7a",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-squidfacil",
+                "reference": "b499345b03ecc6a81d0a018cf6dd530df783a6c7"
             },
             "require": {
-                "mozgbrasil/magento-base-php_72": "dev-master"
+                "mozgbrasil/magento-base-compile_sufix": "@dev"
             },
             "type": "magento-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3422,21 +3806,27 @@
                 "squidfacil",
                 "transportadora"
             ],
-            "time": "2019-03-05T19:25:57+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/magento-squidfacil-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/magento-squidfacil-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/magento-squidfacil-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
-            "name": "mozgbrasil/php-framework-php_72",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mozgbrasil/php-framework-php_72.git",
-                "reference": "131792aa590bc17f27c3f472942547f83c86744e"
-            },
+            "name": "mozgbrasil/php-framework-compile_sufix",
+            "version": "@dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mozgbrasil/php-framework-php_72/zipball/131792aa590bc17f27c3f472942547f83c86744e",
-                "reference": "131792aa590bc17f27c3f472942547f83c86744e",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/marcio/dados/mozgbrasil/php-framework",
+                "reference": "a7c167ccf096eedb289b664078aabd3b2d00268c"
             },
             "require": {
                 "doctrine/collections": ">=1.3.0",
@@ -3489,7 +3879,6 @@
                     "Mozg\\Framework\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3513,7 +3902,19 @@
                 "php",
                 "ubuntu"
             ],
-            "time": "2019-03-05T22:17:08+00:00"
+            "support": {
+                "email": "suporte@mozg.com.br",
+                "issues": "https://github.com/mozgbrasil/php-framework-compile_sufix/issues",
+                "forum": "http://mozg.com.br/forums/view/1",
+                "wiki": "http://wiki.mozg.com.br",
+                "irc": "irc://irc.freenode.org/mozgbrasil",
+                "source": "https://github.com/mozgbrasil/php-framework-compile_sufix",
+                "docs": "https://github.com/mozgbrasil/php-framework-compile_sufix/wiki",
+                "rss": "http://mozg.com.br/sitemap.xml"
+            },
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "nategood/httpful",
@@ -3750,16 +4151,6 @@
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
-            "name": "prasathmani/tinyfilemanager",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/prasathmani/tinyfilemanager.git",
-                "reference": "master"
-            },
-            "type": "library"
-        },
-        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -3857,53 +4248,6 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
-        },
-        {
-            "name": "psr/log",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "time": "2018-11-20T15:27:04+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4150,134 +4494,6 @@
             "time": "2015-12-14T22:37:24+00:00"
         },
         {
-            "name": "symfony/console",
-            "version": "v3.4.23",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "71ce77f37af0c5ffb9590e43cc4f70e426945c5e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/71ce77f37af0c5ffb9590e43cc4f70e426945c5e",
-                "reference": "71ce77f37af0c5ffb9590e43cc4f70e426945c5e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/debug": "~2.8|~3.0|~4.0",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<3.4",
-                "symfony/process": "<3.3"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.3|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
-                "symfony/lock": "~3.4|~4.0",
-                "symfony/process": "~3.3|~4.0"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/lock": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-02-23T15:06:07+00:00"
-        },
-        {
-            "name": "symfony/debug",
-            "version": "v4.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/debug.git",
-                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/de73f48977b8eaf7ce22814d66e43a1662cc864f",
-                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": "<3.4"
-            },
-            "require-dev": {
-                "symfony/http-kernel": "~3.4|~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Debug\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Debug Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-03-03T18:11:24+00:00"
-        },
-        {
             "name": "symfony/event-dispatcher",
             "version": "v2.8.49",
             "source": {
@@ -4390,65 +4606,6 @@
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
             "time": "2019-02-23T15:06:07+00:00"
-        },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "suggest": {
-                "ext-mbstring": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Mbstring extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -5168,11 +5325,28 @@
             "time": "2019-01-30T14:26:10+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mozgbrasil/magento-bundle-php_72": 20
+        "mozgbrasil/magento-iwd-opc": 20,
+        "mozgbrasil/magento-brasil-regions": 20,
+        "mozgbrasil/magento-locale-pt_br": 20,
+        "mozgbrasil/magento-correios-compile_sufix": 20,
+        "mozgbrasil/magento-jamef-compile_sufix": 20,
+        "mozgbrasil/magento-jadlog-compile_sufix": 20,
+        "mozgbrasil/magento-loggi-compile_sufix": 20,
+        "mozgbrasil/magento-clearsale-compile_sufix": 20,
+        "mozgbrasil/magento-customer-compile_sufix": 20,
+        "mozgbrasil/magento-braspag-compile_sufix": 20,
+        "mozgbrasil/magento-cielo-compile_sufix": 20,
+        "mozgbrasil/magento-itau-compile_sufix": 20,
+        "mozgbrasil/magento-checkout-filters-compile_sufix": 20,
+        "mozgbrasil/magento-redecard-compile_sufix": 20,
+        "mozgbrasil/magento-bradesco-compile_sufix": 20,
+        "mozgbrasil/magento-bancodobrasil-compile_sufix": 20,
+        "mozgbrasil/magento-pagseguro-compile_sufix": 20,
+        "mozgbrasil/magento-rede-compile_sufix": 20,
+        "mozgbrasil/magento-squidfacil-compile_sufix": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

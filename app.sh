@@ -174,7 +174,7 @@ awk '/LOCK TABLE/{n=1}; n {n--; next}; 1' < magento/vendor/mozgbrasil/magento-sa
 
 echo -e "${ONYELLOW} Importando... ${RESETCOLOR}"
 
-if [ -f ".env" ] ; then # if file not exits, only local
+if [ -f ".env" ] ; then # if file exits, only local
     echo -e "${RED} .env ${RESETCOLOR}"
     MYSQL_IMPORT=`mysql -h "${MAGE_DB_HOST}" -P "${MAGE_DB_PORT}" -u "${MAGE_DB_USER}" -p"${MAGE_DB_PASS}" "${MAGE_DB_NAME}" < 'magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql'` # Heroku, Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
     echo -e "${RED} MYSQL_IMPORT=${MYSQL_IMPORT} ${RESETCOLOR}"
@@ -331,12 +331,12 @@ mkdir backdoor
 
 if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
     echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${RESETCOLOR}"
-    cp -fr magento/vendor/prasathmani/tinyfilemanager backdoor
+    cp -fr magento/vendor/prasathmani/tinyfilemanager/ backdoor
 fi
 
 if [ -d magento/vendor/maycowa/commando ]; then
     echo -e "${ONYELLOW} maycowa/commando ${RESETCOLOR}"
-    cp -fr magento/vendor/maycowa/commando backdoor
+    cp -fr magento/vendor/maycowa/commando/ backdoor
 fi
 
 echo -e "${ONYELLOW} ... ${RESETCOLOR}"
