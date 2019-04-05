@@ -4,9 +4,9 @@
     "version": "1.0.0",
     "type": "project",
     "keywords": [
-      "deploy",
-      "magento",
-      "mozg"
+        "deploy",
+        "magento",
+        "mozg"
     ],
     "homepage": "http://mozg.com.br",
     "time": "2019-02-25 19:59:31",
@@ -90,183 +90,183 @@
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module-3rd/magento-iwd-opc",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module-3rd/magento-iwd-all",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/php-framework",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-bancodobrasil",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-base",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-boxpacker",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-bradesco",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-brasil-regions",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-braspag",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-checkout-filters",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-cielo",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-clearsale",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-correios",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-customer",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-fee",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
-
+        
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-itau",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-jamef",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-jadlog",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-locale-pt_br",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-loggi",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-pagseguro",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-payment",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-product-page-shipping",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-rede",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-redecard",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         },
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-squidfacil",
             "options": {
-              "symlink": true
+                "symlink": true
             }
         }
     ],
@@ -274,7 +274,7 @@
         "php": "~7.1.3||~7.2.0",
         "magento-hackathon/magento-composer-installer": "~3.0",
         "aydin-hassan/magento-core-composer-installer": "~1.2",
-        "firegento/magento": "~1.9.4.0",
+        "firegento/magento": "~1.9.4.1",
         "mozgbrasil/magento-sample-data-1.9.2.4": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
@@ -319,12 +319,12 @@
     },
     "scripts": {
         "post-update-cmd": [
-          "echo '#@@# post-update-cmd';",
-          "php -r \"system('bash app.sh post_update_cmd');\""
+            "echo '#@@# post-update-cmd';",
+            "php -r \"system('bash app.sh post_update_cmd');\""
         ],
         "post-install-cmd": [
-          "echo '#@@# post-install-cmd';",
-          "php -r \"system('bash app.sh post_install_cmd');\""
+            "echo '#@@# post-install-cmd';",
+            "php -r \"system('bash app.sh post_install_cmd');\""
         ]
     }
 }
