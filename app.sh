@@ -1,31 +1,35 @@
 #!/bin/bash
 
 # Copyright © 2016-2019 Mozg. All rights reserved.
-# See LICENSE.txt for license details.
 
-setVars () {
-  echo -e "${ONYELLOW} setVars ${RESETCOLOR}"
+# https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+#set -Eeuxo pipefail
+set -Eeu
+set -o pipefail  # trace ERR through pipes
+set -o errtrace  # trace ERR through 'time command' and other functions
+function error() {
+    JOB="$0"              # job name
+    LASTLINE="$1"         # line of error occurrence
+    LASTERR="$2"          # error code
+    echo "ERROR in ${JOB} : line ${LASTLINE} with exit code ${LASTERR}"
+    exit 1
+}
+trap 'error ${LINENO} ${?}' ERR
 
-  WICH_7ZA=`which 7za`
-  WICH_TAR=`which tar`
-  WICH_MYSQL=`which mysql`
-  GIT=`which git` > /dev/null
-  PHP_BIN=`which php`
-  OS=`uname -s`
-  REV=`uname -r`
-  MACH=`uname -m`
-  WHOAMI=$(whoami &2>/dev/null)
-  FOLDER_UP="$(cd ../; pwd)"
-  BASE_PATH_USER=~
-  BASE_PATH=$(dirname "$0")
+#
+
+function setVars {
+
+  RED='\033[0;31m'
+  NC='\033[0m' # No Color
+  echo -e "${RED} ${FUNCNAME[0]} ${NC}"
+
   CURRENT_DIRECTORY=$(pwd)
-  BASE_DIR="$( cd -P "$( dirname "$0" )" && pwd )"
-  echo $BASE_DIR
+  echo "CURRENT_DIRECTORY: $CURRENT_DIRECTORY"
+  echo "SHELL: $SHELL"
+  echo "TERM: $TERM"
 
   # Define text styles
-  echo $SHELL
-  echo
-  echo $TERM
   BOLD=''
   NORMAL=''
   [ -z ${TERM} ] || {
@@ -69,28 +73,31 @@ setVars
 
 #
 
-function_before () {
+function _echo {
+  local MESSAGE="$1"
+  echo -e "${GREEN}${MESSAGE}${RESETCOLOR}"
+}
+
+function _before {
   local _FUNCNAME="$1 {"
   echo -e "${ONBLUE}${_FUNCNAME}${RESETCOLOR}"
 }
 
-function_after () {
+function _after {
   echo -e "${ONBLUE}}${RESETCOLOR}"
 }
 
-####################################################################
 # methods
-####################################################################
 
-show_vars () {
+function show_vars {
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
-  echo -e "${ONYELLOW} date ${RESETCOLOR}"
+  _echo "date"
 
   echo $(date +%Y-%m-%d_%H-%M-%S)
 
-  echo -e "${ONYELLOW} pwd ${RESETCOLOR}"
+  _echo "pwd"
 
   pwd
 
@@ -98,49 +105,49 @@ show_vars () {
 
   #du -hsx ./* | sort -rh | head -10
 
-  #echo -e "${ONYELLOW} whoami - print effective userid ${RESETCOLOR}"
+  #_echo "whoami - print effective userid"
 
   #whoami
 
-  ##echo -e "${ONYELLOW} printenv - print all or part of environment ${RESETCOLOR}"
+  ##_echo "printenv - print all or part of environment"
 
   #printenv
 
-  #echo -e "${ONYELLOW} ps - report a snapshot of the current processes ${RESETCOLOR}"
+  #_echo "ps - report a snapshot of the current processes"
 
   #ps aux
 
-  #echo -e "${ONYELLOW} will list all the commands you could run. ${RESETCOLOR}"
+  #_echo "will list all the commands you could run."
 
   #compgen -A function -abck | sort
 
-  function_after
+  _after
 
 }
 
-mysql_select_admin_user () {
+function mysql_select_admin_user {
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
   MYSQL_SELECT_ADMIN_USER=`mysql -h "${RDS_HOSTNAME}" -P "${RDS_PORT}" -u "${RDS_USERNAME}" -p"${RDS_PASSWORD}" "${RDS_DB_NAME}" -N -e "SELECT * FROM admin_user"`
 
-  echo -e "${ONPURPLE} - ${RESETCOLOR}"
+  _echo "-"
 
   #echo $MYSQL_SELECT_ADMIN_USER
 
-  function_after
+  _after
 
 }
 
-release_host () {
+function release_host {
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
-  echo -e "${ONYELLOW} Check local.xml ${RESETCOLOR}"
+  _echo "Check local.xml"
 
   pwd
 
-  echo -e "${ONYELLOW} check n98-magerun ${RESETCOLOR}"
+  _echo "check n98-magerun"
 
   timeProg=`which n98-magerun`
 
@@ -148,7 +155,7 @@ release_host () {
   [[ -f "./n98-magerun.phar" ]] || { echo "n98-magerun local installed" 1>&2 ; }
 
   if [ ! -f "./n98-magerun.phar" ]; then # -z String, True if string is empty.
-  echo -e "${ONYELLOW} n98-magerun ${RESETCOLOR}"
+  _echo "n98-magerun"
   wget https://files.magerun.net/n98-magerun.phar
   chmod +x ./n98-magerun.phar
 fi
@@ -157,13 +164,13 @@ fi
 
 ./n98-magerun.phar --root-dir=magento local-config:generate "$RDS_HOSTNAME:$RDS_PORT" "$RDS_USERNAME" "$RDS_PASSWORD" "$RDS_DB_NAME" "files" "admin" "secret" -vvv
 
-function_after
+_after
 
 }
 
-magento_sample_data_import_haifeng () {
+function magento_sample_data_import_haifeng {
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
   #grep -ri 'LOCK TABLE' magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql
 
@@ -172,48 +179,37 @@ magento_sample_data_import_haifeng () {
 
   #grep -ri 'LOCK TABLE' magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql
 
-  echo -e "${ONYELLOW} Importando... ${RESETCOLOR}"
+  _echo "Importando..."
 
   if [ -f ".env" ] ; then # if file exits, only local
-  echo -e "${RED} .env ${RESETCOLOR}"
+  _echo ".env" "$ONRED"
   MYSQL_IMPORT=`mysql -h "${RDS_HOSTNAME}" -P "${RDS_PORT}" -u "${RDS_USERNAME}" -p"${RDS_PASSWORD}" "${RDS_DB_NAME}" < 'magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql'` # Heroku, Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-  echo -e "${RED} MYSQL_IMPORT=${MYSQL_IMPORT} ${RESETCOLOR}"
+  _echo "MYSQL_IMPORT=${MYSQL_IMPORT}" "$ONRED"
 fi
 
 #
 
 #php bin/worker.php "$STRING_MYSQL_IMPORT" # heroku[run.8223]: Awaiting client, : Starting process with command
 
-function_after
+_after
 
 }
 
-magento_install () {
+function magento_install {
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
-  echo -e "${ONYELLOW} pwd ${RESETCOLOR}"
+  _echo "pwd"
 
   pwd
 
-  echo -e "${ONYELLOW} path ${RESETCOLOR}"
+  _echo "path"
 
   pwd
   cd $CURRENT_DIRECTORY/magento
   pwd
 
-  echo -e "${ONYELLOW} Aplicando permissões ${RESETCOLOR}"
-  # https://devdocs.magento.com/guides/m1x/install/installer-privileges_after.html
-
-  #chmod 777 -R /home/marcio/dados/mozgbrasil/magento/magento/var
-
-  if [ -f .env ] ; then # if file exits
-  echo -e "${RED} .env ${RESETCOLOR}"
-  # Ubuntu local
-  chown -R $USER:www-data .
-  fi
-
-  echo -e "${ONYELLOW} install.php ${RESETCOLOR}"
+  _echo "install.php"
 
   php -f install.php -- \
   --license_agreement_accepted "yes" \
@@ -236,156 +232,170 @@ magento_install () {
   --admin_username "admin" \
   --admin_password "123456a"
 
-  echo -e "${ONYELLOW} magento/index.php ${RESETCOLOR}"
+  _echo "magento/index.php"
 
   php index.php
 
-  echo -e "${ONYELLOW} shell ${RESETCOLOR}"
+  _echo "shell"
 
-  echo -e "${ONYELLOW} compiler.php --state ${RESETCOLOR}"
+  _echo "compiler.php --state"
 
   php shell/compiler.php --state
 
-  echo -e "${ONYELLOW} log.php --clean ${RESETCOLOR}"
+  _echo "log.php --clean"
 
   php shell/log.php --clean
 
-  echo -e "${ONYELLOW} indexer.php --status ${RESETCOLOR}"
+  _echo "indexer.php --status"
 
   php shell/indexer.php --status
 
-  echo -e "${ONYELLOW} indexer.php --info ${RESETCOLOR}"
+  _echo "indexer.php --info"
 
   php shell/indexer.php --info
 
-  echo -e "${ONYELLOW} indexer.php --reindexall ${RESETCOLOR}"
+  _echo "indexer.php --reindexall"
 
   php shell/indexer.php --reindexall
 
-  echo -e "${ONYELLOW} mage ${RESETCOLOR}"
+  _echo "mage"
 
   chmod +x mage
 
   bash ./mage
 
-  echo -e "${ONYELLOW} mage-setup ${RESETCOLOR}"
+  _echo "mage-setup"
 
   bash ./mage mage-setup
 
-  echo -e "${ONYELLOW} sync ${RESETCOLOR}"
+  _echo "sync"
 
   bash ./mage sync
 
-  echo -e "${ONYELLOW} list-installed ${RESETCOLOR}"
+  _echo "list-installed"
 
   bash ./mage list-installed
 
-  echo -e "${ONYELLOW} list-upgrades ${RESETCOLOR}"
+  _echo "list-upgrades"
 
   bash ./mage list-upgrades
 
-  echo -e "${ONYELLOW} path ${RESETCOLOR}"
+  _echo "path"
 
   pwd
   cd $CURRENT_DIRECTORY
   pwd
 
-  echo -e "${ONYELLOW} path ${RESETCOLOR}"
+  _echo "path"
 
   ./n98-magerun.phar --root-dir="magento" config:set dev/template/allow_symlink 1
 
-  function_after
+  _after
 
 }
 
-release () {
+function release {
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
 
-  function_after
+  _after
 
 }
 
-post_update_cmd () { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
+function post_update_cmd { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
 # Na heroku o Mysql ainda não foi instalado nesse ponto
 
-  function_before ${FUNCNAME[0]}
+  _before ${FUNCNAME[0]}
 
-  echo -e "${ONYELLOW} path ${RESETCOLOR}"
+  _echo "path"
 
   pwd
 
-  echo -e "${ONYELLOW} du ${RESETCOLOR}"
+  _echo "du"
 
   du -hsx ./* | sort -rh | head -10
   du -hsx magento/vendor/* | sort -rh | head -10
 
-  echo -e "${ONYELLOW} cp ${RESETCOLOR}"
+  _echo "cp"
 
   if [ -d magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media ]; then
-    echo -e "${ONYELLOW} mozgbrasil/magento-sample-data-1.9.2.4 ${RESETCOLOR}"
-    echo -e "${ONYELLOW} FIX: Heroku, Compiled slug size: 823M is too large (max is 500M). ${RESETCOLOR}"
+    _echo "mozgbrasil/magento-sample-data-1.9.2.4"
+    _echo "FIX: Heroku, Compiled slug size: 823M is too large (max is 500M)."
     cp -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
     cp -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
   fi
 
   if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
-    echo -e "${ONYELLOW} ceckoslab/ceckoslab_quicklogin ${RESETCOLOR}"
+    _echo "ceckoslab/ceckoslab_quicklogin"
     cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
   fi
 
   mkdir backdoor
 
   if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
-    echo -e "${ONYELLOW} prasathmani/tinyfilemanager ${RESETCOLOR}"
+    _echo "prasathmani/tinyfilemanager"
     cp -fr magento/vendor/prasathmani/tinyfilemanager/ backdoor
   fi
 
   if [ -d magento/vendor/maycowa/commando ]; then
-    echo -e "${ONYELLOW} maycowa/commando ${RESETCOLOR}"
+    _echo "maycowa/commando"
     cp -fr magento/vendor/maycowa/commando/ backdoor
   fi
 
-  echo -e "${ONYELLOW} ... ${RESETCOLOR}"
+  _echo "..."
 
   show_vars
   profile
 
-  function_after
+  _after
 
 }
 
-post_install_cmd () { # post-install-cmd: occurs after the install command has been executed with a lock file present.
+function post_install_cmd { # post-install-cmd: occurs after the install command has been executed with a lock file present.
 
-function_before ${FUNCNAME[0]}
+_before ${FUNCNAME[0]}
 
 post_update_cmd
 
-function_after
+_after
 
 }
 
-postdeploy () { # postdeploy command. Use this to run any one-time setup tasks that make the app, and any databases, ready and useful for testing.
+function postdeploy { # postdeploy command. Use this to run any one-time setup tasks that make the app, and any databases, ready and useful for testing.
 
-function_before ${FUNCNAME[0]}
+_before ${FUNCNAME[0]}
 
 post_update_cmd # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
 
-function_after
+_after
 
 }
 
-profile () { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
+function profile { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
 
-function_before ${FUNCNAME[0]}
+_before ${FUNCNAME[0]}
 
-pwd
-echo -e "${ONYELLOW} check mysql ${RESETCOLOR}"
+_echo "Aplicando permissões"
+# https://devdocs.magento.com/guides/m1x/install/installer-privileges_after.html
+
+#chmod 777 -R /home/marcio/dados/mozgbrasil/magento/magento/var
+
+if [ -f .env ] ; then # if file exits
+  _echo ".env" "$ONRED"
+  # Ubuntu local
+  chown -R $USER:www-data .
+fi
+
+_echo "pwd && ls -lah magento/app/etc"
+
+pwd && ls -lah magento/app/etc
+
+_echo "check mysql"
 
 if type mysql >/dev/null 2>&1; then
 
-  echo -e "${ONGREEN} mysql installed ${RESETCOLOR}"
+  _echo "mysql installed"
 
   if [ -f ".env" ] ; then # if file exits, only local
   if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
@@ -395,10 +405,10 @@ fi
 fi
 
 else
-  echo -e "${ONRED} mysql not installed ${RESETCOLOR}"
+  _echo "mysql not installed" "$ONRED"
 fi
 
-echo -e "${ONYELLOW} - ${RESETCOLOR}"
+_echo "-"
 
 if [ ! -f ".env" ] ; then # if file not exits, only heroku ...
 if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
@@ -406,36 +416,38 @@ release_host
 fi
 fi
 
-function_after
+_after
 
+}
+
+function test {
+  _before ${FUNCNAME[0]}
+  _echo "SUCCESS"
+  _after
 }
 
 #
 
-echo -e "${ONYELLOW} .env loading in the shell ${RESETCOLOR}"
+_echo "env RDS_"
+env | grep ^RDS_ || true
 
-dotenv () {
+_echo ".env loading in the shell"
+
+function dotenv {
   set -a
-  [ -f .env ] && . .env
+  [ -f "$1" ] && . "$1"
   set +a
 }
 
-dotenv
+dotenv ".env"
 
-echo -e "${ONYELLOW} env RDS_ ${RESETCOLOR}"
-
-env | grep ^RDS_
+_echo "env RDS_"
+env | grep ^RDS_ || true
 
 #
 
 METHOD=${1}
 
-if [ "$METHOD" ]; then
+if [ ! -z $METHOD ]; then # -z String, True if string is empty.
   $METHOD
-else
-  echo -e "${ONRED} abort () { ${RESETCOLOR}"
 fi
-
-#
-
-#curl --request POST "https://fleep.io/hook/OLuIRi0JRt2yv5OQisX6tg" --data $1
