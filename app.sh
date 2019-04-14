@@ -24,8 +24,8 @@ function setVars {
   NC='\033[0m' # No Color
   echo -e "${RED} ${FUNCNAME[0]} ${NC}"
 
-  CURRENT_DIRECTORY=$(pwd)
-  echo "CURRENT_DIRECTORY: $CURRENT_DIRECTORY"
+  SOURCE_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+  echo "SOURCE_DIR: $SOURCE_DIR"
   echo "SHELL: $SHELL"
   echo "TERM: $TERM"
 
@@ -73,81 +73,45 @@ setVars
 
 #
 
-function _echo {
+function echio {
   local MESSAGE="$1"
   echo -e "${GREEN}${MESSAGE}${RESETCOLOR}"
 }
 
-function _before {
+function fnc_before {
   local _FUNCNAME="$1 {"
   echo -e "${ONBLUE}${_FUNCNAME}${RESETCOLOR}"
 }
 
-function _after {
+function fnc_after {
   echo -e "${ONBLUE}}${RESETCOLOR}"
 }
 
 # methods
 
-function show_vars {
-
-  _before ${FUNCNAME[0]}
-
-  _echo "date"
-
-  echo $(date +%Y-%m-%d_%H-%M-%S)
-
-  _echo "pwd"
-
-  pwd
-
-  #df -h
-
-  #du -hsx ./* | sort -rh | head -10
-
-  #_echo "whoami - print effective userid"
-
-  #whoami
-
-  ##_echo "printenv - print all or part of environment"
-
-  #printenv
-
-  #_echo "ps - report a snapshot of the current processes"
-
-  #ps aux
-
-  #_echo "will list all the commands you could run."
-
-  #compgen -A function -abck | sort
-
-  _after
-
-}
-
 function mysql_select_admin_user {
 
-  _before ${FUNCNAME[0]}
+  fnc_before ${FUNCNAME[0]}
 
   MYSQL_SELECT_ADMIN_USER=`mysql -h "${RDS_HOSTNAME}" -P "${RDS_PORT}" -u "${RDS_USERNAME}" -p"${RDS_PASSWORD}" "${RDS_DB_NAME}" -N -e "SELECT * FROM admin_user"`
 
-  _echo "-"
+  echio "-"
 
   #echo $MYSQL_SELECT_ADMIN_USER
 
-  _after
+  fnc_after
 
 }
 
 function release_host {
 
-  _before ${FUNCNAME[0]}
+  fnc_before ${FUNCNAME[0]}
 
-  _echo "Check local.xml"
+  echio "Check local.xml"
 
   pwd
 
-  _echo "check n98-magerun"
+  echio "check n98-magerun"
 
   timeProg=`which n98-magerun`
 
@@ -155,7 +119,7 @@ function release_host {
   [[ -f "./n98-magerun.phar" ]] || { echo "n98-magerun local installed" 1>&2 ; }
 
   if [ ! -f "./n98-magerun.phar" ]; then # -z String, True if string is empty.
-  _echo "n98-magerun"
+  echio "n98-magerun"
   wget https://files.magerun.net/n98-magerun.phar
   chmod +x ./n98-magerun.phar
 fi
@@ -164,13 +128,13 @@ fi
 
 ./n98-magerun.phar --root-dir=magento local-config:generate "$RDS_HOSTNAME:$RDS_PORT" "$RDS_USERNAME" "$RDS_PASSWORD" "$RDS_DB_NAME" "files" "admin" "secret" -vvv
 
-_after
+fnc_after
 
 }
 
 function magento_sample_data_import_haifeng {
 
-  _before ${FUNCNAME[0]}
+  fnc_before ${FUNCNAME[0]}
 
   #grep -ri 'LOCK TABLE' magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4.sql
 
@@ -179,37 +143,42 @@ function magento_sample_data_import_haifeng {
 
   #grep -ri 'LOCK TABLE' magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql
 
-  _echo "Importando..."
+  echio "Importando..."
 
   if [ -f ".env" ] ; then # if file exits, only local
-  _echo ".env" "$ONRED"
+  echio ".env" "$ONRED"
   MYSQL_IMPORT=`mysql -h "${RDS_HOSTNAME}" -P "${RDS_PORT}" -u "${RDS_USERNAME}" -p"${RDS_PASSWORD}" "${RDS_DB_NAME}" < 'magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/magento_sample_data_for_1.9.2.4_unlock.sql'` # Heroku, Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-  _echo "MYSQL_IMPORT=${MYSQL_IMPORT}" "$ONRED"
+  echio "MYSQL_IMPORT=${MYSQL_IMPORT}" "$ONRED"
 fi
 
 #
 
 #php bin/worker.php "$STRING_MYSQL_IMPORT" # heroku[run.8223]: Awaiting client, : Starting process with command
 
-_after
+fnc_after
+
+}
+
+function is_folder_magento {
+
+  fnc_before ${FUNCNAME[0]}
+
+  if [ ! -f "mage" ] ; then # if file not exits
+    echio "mage not exists"
+    exit
+  fi
+
+  fnc_after
 
 }
 
 function magento_install {
 
-  _before ${FUNCNAME[0]}
+  fnc_before ${FUNCNAME[0]}
 
-  _echo "pwd"
+  is_folder_magento
 
-  pwd
-
-  _echo "path"
-
-  pwd
-  cd $CURRENT_DIRECTORY/magento
-  pwd
-
-  _echo "install.php"
+  echio "install.php"
 
   php -f install.php -- \
   --license_agreement_accepted "yes" \
@@ -232,170 +201,167 @@ function magento_install {
   --admin_username "admin" \
   --admin_password "123456a"
 
-  _echo "magento/index.php"
+  echio "magento/index.php"
 
   php index.php
 
-  _echo "shell"
+  echio "shell"
 
-  _echo "compiler.php --state"
+  echio "compiler.php --state"
 
   php shell/compiler.php --state
 
-  _echo "log.php --clean"
+  echio "log.php --clean"
 
   php shell/log.php --clean
 
-  _echo "indexer.php --status"
+  echio "indexer.php --status"
 
   php shell/indexer.php --status
 
-  _echo "indexer.php --info"
+  echio "indexer.php --info"
 
   php shell/indexer.php --info
 
-  _echo "indexer.php --reindexall"
+  echio "indexer.php --reindexall"
 
   php shell/indexer.php --reindexall
 
-  _echo "mage"
+  echio "mage"
 
   chmod +x mage
 
   bash ./mage
 
-  _echo "mage-setup"
+  echio "mage-setup"
 
   bash ./mage mage-setup
 
-  _echo "sync"
+  echio "sync"
 
   bash ./mage sync
 
-  _echo "list-installed"
+  echio "list-installed"
 
   bash ./mage list-installed
 
-  _echo "list-upgrades"
+  echio "list-upgrades"
 
   bash ./mage list-upgrades
 
-  _echo "path"
+  echio "n98-magerun.phar"
 
-  pwd
-  cd $CURRENT_DIRECTORY
-  pwd
+  ../n98-magerun.phar config:set dev/template/allow_symlink 1
 
-  _echo "path"
-
-  ./n98-magerun.phar --root-dir="magento" config:set dev/template/allow_symlink 1
-
-  _after
+  fnc_after
 
 }
 
 function release {
 
-  _before ${FUNCNAME[0]}
+  fnc_before ${FUNCNAME[0]}
 
 
-  _after
+  fnc_after
 
 }
 
 function post_update_cmd { # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
 # Na heroku o Mysql ainda não foi instalado nesse ponto
 
-  _before ${FUNCNAME[0]}
+  fnc_before ${FUNCNAME[0]}
 
-  _echo "path"
+  echio "path"
 
   pwd
 
-  _echo "du"
+  echio "du"
 
   du -hsx ./* | sort -rh | head -10
   du -hsx magento/vendor/* | sort -rh | head -10
 
-  _echo "cp"
+  echio "cp"
 
   if [ -d magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media ]; then
-    _echo "mozgbrasil/magento-sample-data-1.9.2.4"
-    _echo "FIX: Heroku, Compiled slug size: 823M is too large (max is 500M)."
+    echio "mozgbrasil/magento-sample-data-1.9.2.4"
+    echio "FIX: Heroku, Compiled slug size: 823M is too large (max is 500M)."
     cp -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/media/* magento/media/
     cp -fr magento/vendor/mozgbrasil/magento-sample-data-1.9.2.4/skin/* magento/skin/
   fi
 
   if [ -d magento/vendor/ceckoslab/ceckoslab_quicklogin ]; then
-    _echo "ceckoslab/ceckoslab_quicklogin"
+    echio "ceckoslab/ceckoslab_quicklogin"
     cp -fr magento/vendor/ceckoslab/ceckoslab_quicklogin/app/* magento/app/
   fi
 
   mkdir backdoor
 
   if [ -d magento/vendor/prasathmani/tinyfilemanager ]; then
-    _echo "prasathmani/tinyfilemanager"
+    echio "prasathmani/tinyfilemanager"
     cp -fr magento/vendor/prasathmani/tinyfilemanager/ backdoor
   fi
 
   if [ -d magento/vendor/maycowa/commando ]; then
-    _echo "maycowa/commando"
+    echio "maycowa/commando"
     cp -fr magento/vendor/maycowa/commando/ backdoor
   fi
 
-  _echo "..."
-
-  show_vars
   profile
 
-  _after
+  fnc_after
 
 }
 
 function post_install_cmd { # post-install-cmd: occurs after the install command has been executed with a lock file present.
 
-_before ${FUNCNAME[0]}
+fnc_before ${FUNCNAME[0]}
 
 post_update_cmd
 
-_after
+fnc_after
 
 }
 
 function postdeploy { # postdeploy command. Use this to run any one-time setup tasks that make the app, and any databases, ready and useful for testing.
 
-_before ${FUNCNAME[0]}
+fnc_before ${FUNCNAME[0]}
 
 post_update_cmd # post-update-cmd: occurs after the update command has been executed, or after the install command has been executed without a lock file present.
 
-_after
+fnc_after
 
 }
 
 function profile { # Heroku, During startup, the container starts a bash shell that runs any code in $HOME/.profile before executing the dyno’s command. You can put bash code in this file to manipulate the initial environment, at runtime, for all dyno types in your app.
 
-_before ${FUNCNAME[0]}
+fnc_before ${FUNCNAME[0]}
 
-_echo "Aplicando permissões"
-# https://devdocs.magento.com/guides/m1x/install/installer-privileges_after.html
+echio "path"
+
+pwd
+cd $SOURCE_DIR/magento
+pwd
+
+echio "Aplicando permissões"
+# https://devdocs.magento.com/guides/m1x/install/installer-privilegesfnc_after.html
 
 #chmod 777 -R /home/marcio/dados/mozgbrasil/magento/magento/var
 
 if [ -f .env ] ; then # if file exits
-  _echo ".env" "$ONRED"
+  echio ".env" "$ONRED"
   # Ubuntu local
   chown -R $USER:www-data .
 fi
 
-_echo "pwd && ls -lah magento/app/etc"
+echio "pwd && ls -lah magento/app/etc"
 
 pwd && ls -lah magento/app/etc
 
-_echo "check mysql"
+echio "check mysql"
 
 if type mysql >/dev/null 2>&1; then
 
-  _echo "mysql installed"
+  echio "mysql installed"
 
   if [ -f ".env" ] ; then # if file exits, only local
   if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
@@ -405,10 +371,10 @@ fi
 fi
 
 else
-  _echo "mysql not installed" "$ONRED"
+  echio "mysql not installed" "$ONRED"
 fi
 
-_echo "-"
+echio "-"
 
 if [ ! -f ".env" ] ; then # if file not exits, only heroku ...
 if [ ! -f "magento/app/etc/local.xml" ] ; then # if file not exits
@@ -416,22 +382,22 @@ release_host
 fi
 fi
 
-_after
+fnc_after
 
 }
 
 function test {
-  _before ${FUNCNAME[0]}
-  _echo "SUCCESS"
-  _after
+  fnc_before ${FUNCNAME[0]}
+  echio "SUCCESS"
+  fnc_after
 }
 
 #
 
-_echo "env RDS_"
+echio "env RDS_"
 env | grep ^RDS_ || true
 
-_echo ".env loading in the shell"
+echio ".env loading in the shell"
 
 function dotenv {
   set -a
@@ -441,7 +407,7 @@ function dotenv {
 
 dotenv ".env"
 
-_echo "env RDS_"
+echio "env RDS_"
 env | grep ^RDS_ || true
 
 #
