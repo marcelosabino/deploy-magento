@@ -29,16 +29,6 @@ function setVars {
   echo "SHELL: $SHELL"
   echo "TERM: $TERM"
 
-  # Define text styles
-  BOLD=''
-  NORMAL=''
-  [ -z ${TERM} ] || {
-    #BOLD=`tput bold` # Error Heroku, tput: No value for $TERM and no -T specified
-    #NORMAL=`tput sgr0`
-    BOLD=$(tput bold)
-    NORMAL=$(tput sgr0)
-  }
-
   # Reset
   RESETCOLOR='\e[0m'       # Text Reset
 
@@ -73,9 +63,24 @@ setVars
 
 #
 
+# https://stackoverflow.com/questions/1007538/check-if-a-function-exists-from-a-bash-script?lq=1
+function function_exists {
+  FUNCTION_NAME=$1
+  [ -z "$FUNCTION_NAME" ] && return 1
+  declare -F "$FUNCTION_NAME" > /dev/null 2>&1
+  return $?
+}
+
+# https://unix.stackexchange.com/questions/212183/how-do-i-check-if-a-variable-exists-in-an-if-statement
+has_declare() { # check if variable is set at all
+    local "$@" # inject 'name' argument in local scope
+    &>/dev/null declare -p "$name" # return 0 when var is present
+}
+
 function echio {
   local MESSAGE="$1"
-  echo -e "${GREEN}${MESSAGE}${RESETCOLOR}"
+  local COLOR=${2:-$GREEN}
+  echo -e "${COLOR}${MESSAGE}${RESETCOLOR}"
 }
 
 function fnc_before {
@@ -350,7 +355,7 @@ echio "Aplicando permissões"
 if [ -f .env ] ; then # if file exits
   echio ".env" "$ONRED"
   # Ubuntu local
-  chown -R $USER:www-data .
+  chown -R $USER:www-data $SOURCE_DIR/magento
 fi
 
 echio "pwd && ls -lah magento/app/etc"
@@ -414,6 +419,8 @@ env | grep ^RDS_ || true
 
 METHOD=${1}
 
-if [ ! -z $METHOD ]; then # -z String, True if string is empty.
+if function_exists $METHOD; then
   $METHOD
+else
+  echio "Method not exists" "$ONRED"
 fi
