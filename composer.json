@@ -191,7 +191,6 @@
                 "symlink": true
             }
         },
-        
         {
             "type": "path",
             "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-itau",
@@ -272,9 +271,9 @@
     ],
     "require": {
         "php": "~7.1.3||~7.2.0",
-        "magento-hackathon/magento-composer-installer": "~3.0",
-        "aydin-hassan/magento-core-composer-installer": "~1.2",
-        "firegento/magento": "~1.9.4.1",
+        "aydin-hassan/magento-core-composer-installer": "^1.5",
+        "openmage/magento-lts": "1.9.4.x-dev",
+        "aydin-hassan/magento-connect-composer-plugin" : "~1.0",
         "mozgbrasil/magento-sample-data-1.9.2.4": "1.0.*",
         "aoepeople/aoe_scheduler": "^1.5",
         "aschroder/smtp_pro": "^2.0",
@@ -312,6 +311,10 @@
         "vendor-dir": "magento/vendor"
     },
     "extra":{
+        "connect-packages" : {
+            "Aijko_WidgetImageChooser" : "*"
+        },
+        "magento-core-package-type": "magento-source",
         "magento-root-dir":"magento/",
         "magento-deploystrategy": "copy",
         "magento-deploystrategy-dev": "symlink",

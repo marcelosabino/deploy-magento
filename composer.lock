@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46d4f80d4d3109566ec96585fd25e3db",
+    "content-hash": "891ceb0f1b7901b981a1365aa6d8d28f",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -101,6 +101,46 @@
                 "issues": "https://github.com/aschroder/Magento-SMTP-Pro-Email-Extension/issues"
             },
             "time": "2015-10-30T09:33:29+00:00"
+        },
+        {
+            "name": "aydin-hassan/magento-connect-composer-plugin",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AydinHassan/magento-connect-composer-plugin.git",
+                "reference": "51dd19f374eb55e30c9a46ae55d268404b2ace32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AydinHassan/magento-connect-composer-plugin/zipball/51dd19f374eb55e30c9a46ae55d268404b2ace32",
+                "reference": "51dd19f374eb55e30c9a46ae55d268404b2ace32",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0@dev",
+                "phpunit/phpunit": "~4.3",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "\\AydinHassan\\MagentoConnectPlugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "AydinHassan\\MagentoConnectPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Aydin Hassan",
+                    "email": "aydin@hotmail.co.uk"
+                }
+            ],
+            "time": "2016-04-05T15:15:22+00:00"
         },
         {
             "name": "aydin-hassan/magento-core-composer-installer",
@@ -259,32 +299,6 @@
                 "type"
             ],
             "time": "2015-11-03T22:21:38+00:00"
-        },
-        {
-            "name": "firegento/magento",
-            "version": "v1.9.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firegento/magento.git",
-                "reference": "e9f3e89784f8f7a02783b138075b1747c21b2eaf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firegento/magento/zipball/e9f3e89784f8f7a02783b138075b1747c21b2eaf",
-                "reference": "e9f3e89784f8f7a02783b138075b1747c21b2eaf",
-                "shasum": ""
-            },
-            "type": "magento-core",
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "description": "Magento CE",
-            "support": {
-                "source": "https://github.com/firegento/magento/tree/v1.9.4.1",
-                "issues": "https://github.com/firegento/magento/issues"
-            },
-            "time": "2019-03-27T09:33:55+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -470,6 +484,48 @@
             "type": "library"
         },
         {
+            "name": "openmage/magento-lts",
+            "version": "1.9.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OpenMage/magento-lts.git",
+                "reference": "9163045eb0b5d3e3b247dffcf9d13b25fda4ed6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OpenMage/magento-lts/zipball/9163045eb0b5d3e3b247dffcf9d13b25fda4ed6f",
+                "reference": "9163045eb0b5d3e3b247dffcf9d13b25fda4ed6f",
+                "shasum": ""
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*",
+                "php": ">=5.6 <7.3"
+            },
+            "type": "magento-source",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Saferite",
+                    "email": "lee.saferite@aoe.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "David Robinson",
+                    "email": "david.robinson@aoe.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Daniel Fahlke aka Flyingmana",
+                    "email": "flyingmana@googlemail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "time": "2019-04-14T08:56:13+00:00"
+        },
+        {
             "name": "prasathmani/tinyfilemanager",
             "version": "1.0.0",
             "source": {
@@ -528,16 +584,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.24",
+            "version": "v3.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "98ae3cdc4bec48fe7ee24afc81dbb4a242186c9e"
+                "reference": "15a9104356436cb26e08adab97706654799d31d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/98ae3cdc4bec48fe7ee24afc81dbb4a242186c9e",
-                "reference": "98ae3cdc4bec48fe7ee24afc81dbb4a242186c9e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/15a9104356436cb26e08adab97706654799d31d8",
+                "reference": "15a9104356436cb26e08adab97706654799d31d8",
                 "shasum": ""
             },
             "require": {
@@ -596,20 +652,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-31T11:33:18+00:00"
+            "time": "2019-04-08T09:29:13+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v4.2.5",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "43ce8ab34c734dcc8a4af576cb86711daab964c5"
+                "reference": "2d279b6bb1d582dd5740d4d3251ae8c18812ed37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/43ce8ab34c734dcc8a4af576cb86711daab964c5",
-                "reference": "43ce8ab34c734dcc8a4af576cb86711daab964c5",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/2d279b6bb1d582dd5740d4d3251ae8c18812ed37",
+                "reference": "2d279b6bb1d582dd5740d4d3251ae8c18812ed37",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +708,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-10T17:09:50+00:00"
+            "time": "2019-04-11T11:27:41+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2203,16 +2259,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.79",
+            "version": "v1.2.81",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "e6ce66e9c892c42898cf84a35ecbfec5b4ab481c"
+                "reference": "ffb1880f8e9610569d3bc70dc90bf07db311471d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/e6ce66e9c892c42898cf84a35ecbfec5b4ab481c",
-                "reference": "e6ce66e9c892c42898cf84a35ecbfec5b4ab481c",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/ffb1880f8e9610569d3bc70dc90bf07db311471d",
+                "reference": "ffb1880f8e9610569d3bc70dc90bf07db311471d",
                 "shasum": ""
             },
             "require": {
@@ -2248,7 +2304,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2019-03-04T19:10:41+00:00"
+            "time": "2019-04-23T20:02:21+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -2378,16 +2434,16 @@
         },
         {
             "name": "jms/serializer",
-            "version": "2.2.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "3c3d4f1b97738722c7da36ce42ae62911ccf6794"
+                "reference": "bf2bae374e565f443fc01fe60695061366bd3261"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/3c3d4f1b97738722c7da36ce42ae62911ccf6794",
-                "reference": "3c3d4f1b97738722c7da36ce42ae62911ccf6794",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/bf2bae374e565f443fc01fe60695061366bd3261",
+                "reference": "bf2bae374e565f443fc01fe60695061366bd3261",
                 "shasum": ""
             },
             "require": {
@@ -2408,7 +2464,7 @@
                 "doctrine/phpcr-odm": "^1.3|^2.0",
                 "ext-pdo_sqlite": "*",
                 "jackalope/jackalope-doctrine-dbal": "^1.1.5",
-                "phpunit/phpunit": "^7.1",
+                "phpunit/phpunit": "^7.5",
                 "psr/container": "^1.0",
                 "symfony/dependency-injection": "^3.0|^4.0",
                 "symfony/expression-language": "^3.0|^4.0",
@@ -2417,7 +2473,7 @@
                 "symfony/translation": "^3.0|^4.0",
                 "symfony/validator": "^3.1.9|^4.0",
                 "symfony/yaml": "^3.3|^4.0",
-                "twig/twig": "^1.12|^2.0"
+                "twig/twig": "~1.34|~2.4"
             },
             "suggest": {
                 "doctrine/cache": "Required if you like to use cache functionality.",
@@ -2427,7 +2483,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -2458,7 +2514,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2019-02-27T20:38:28+00:00"
+            "time": "2019-04-23T17:53:59+00:00"
         },
         {
             "name": "league/csv",
@@ -2657,7 +2713,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-bancodobrasil",
-                "reference": "3469b084441ba2d7254b0930765327c995aca8f9"
+                "reference": "c4bba33200707b3e25a0e156a4c31af5f816e0f8"
             },
             "require": {
                 "mozgbrasil/magento-payment-compile_sufix": "@dev"
@@ -2810,7 +2866,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-bradesco",
-                "reference": "b3be7df0b8cb2ae5e665004f9260ca3de70cf171"
+                "reference": "82f09df6d3d7a50c09828397734259fe4cf2f8bb"
             },
             "require": {
                 "mozgbrasil/magento-payment-compile_sufix": "@dev"
@@ -2897,7 +2953,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-braspag",
-                "reference": "79b40c3c506f6b0caf0c57cfe70a60f6f4a8769b"
+                "reference": "4f3472d91bb41936cce93289a196a79c0d6f2b44"
             },
             "require": {
                 "mozgbrasil/magento-payment-compile_sufix": "@dev"
@@ -2990,7 +3046,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-cielo",
-                "reference": "86861b3a4f6c395f8a2df3ae2c4735924f5874c2"
+                "reference": "22d37de0eae218edaac518d885fbcf01d2c7a6fd"
             },
             "require": {
                 "mozgbrasil/magento-payment-compile_sufix": "@dev"
@@ -3225,7 +3281,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-itau",
-                "reference": "ac83fb6cf9d67451bdc6d09a09cd77872329156c"
+                "reference": "021a972bdd695d48be8296e9f731abf90c91a482"
             },
             "require": {
                 "dilneiss/itaubankline": "*",
@@ -3545,7 +3601,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-pagseguro",
-                "reference": "9da5e2f198d7041968bb3d17e84bcce8f4cc593a"
+                "reference": "e5833a3df2aa0de0781b46dcfc2ab1290a23a759"
             },
             "require": {
                 "mozgbrasil/magento-payment-compile_sufix": "@dev",
@@ -3593,7 +3649,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-payment",
-                "reference": "9ff93e939c428274c638ddded28bd59190246f55"
+                "reference": "cde0142391ff218803ca13f410d640575dd7ec62"
             },
             "require": {
                 "mozgbrasil/magento-base-compile_sufix": "@dev",
@@ -3688,7 +3744,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-rede",
-                "reference": "5e69ee741d2091b230a7314ba04cfc0c29205a6f"
+                "reference": "cf5f6ecf2ca9400700f3eef8da236091cd766c88"
             },
             "require": {
                 "mozgbrasil/magento-payment-compile_sufix": "@dev"
@@ -3735,7 +3791,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/marcio/dados/mozgbrasil/magento-module/magento-redecard",
-                "reference": "c2a8448e9aa6413eca8d1851af188e28b25b433c"
+                "reference": "1a7a5891d2b6effff1a8fc341b61c82045d063f2"
             },
             "require": {
                 "byjg/omnipay-komerci": "*",
@@ -4500,7 +4556,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.49",
+            "version": "v2.8.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -4560,16 +4616,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.24",
+            "version": "v3.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "61094ca72e8934c6502af5259ef6296eb09aa424"
+                "reference": "fa02215233be8de1c2b44617088192f9e8db3512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/61094ca72e8934c6502af5259ef6296eb09aa424",
-                "reference": "61094ca72e8934c6502af5259ef6296eb09aa424",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/fa02215233be8de1c2b44617088192f9e8db3512",
+                "reference": "fa02215233be8de1c2b44617088192f9e8db3512",
                 "shasum": ""
             },
             "require": {
@@ -4610,7 +4666,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-25T07:48:46+00:00"
+            "time": "2019-05-01T08:04:33+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -4728,16 +4784,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.2.5",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf"
+                "reference": "3c4084cb1537c0e2ad41aad622bbf55a44a5c9ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9f87189ac10b42edf7fb8edc846f1937c6d157cf",
-                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/3c4084cb1537c0e2ad41aad622bbf55a44a5c9ce",
+                "reference": "3c4084cb1537c0e2ad41aad622bbf55a44a5c9ce",
                 "shasum": ""
             },
             "require": {
@@ -4800,7 +4856,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-02-23T15:17:42+00:00"
+            "time": "2019-05-01T12:55:36+00:00"
         },
         {
             "name": "tecnickcom/tcpdf",
@@ -5333,6 +5389,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "openmage/magento-lts": 20,
         "mozgbrasil/magento-iwd-opc": 20,
         "mozgbrasil/magento-brasil-regions": 20,
         "mozgbrasil/magento-locale-pt_br": 20,
