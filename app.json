@@ -12,8 +12,8 @@
     "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
     "success_url":"/",
     "scripts":{
-        "postdeploy":"bash app.sh postdeploy",
-        "pr-predestroy":"bash app.sh predestroy"
+        "postdeploy":"./app.sh postdeploy",
+        "pr-predestroy":"./app.sh predestroy"
     },
     "env":{
         "MAGE_URL":{
@@ -72,7 +72,7 @@
     "environments":{
         "test":{
             "scripts":{
-                "test":"bash app.sh environments"
+                "test":"./app.sh environments"
             }
         }
     },
